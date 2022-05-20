@@ -278,7 +278,7 @@ img {
 }
 
 #header .login-btn>a {
-    border-radius: 4px;    
+    border-radius: 4px;
     background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
 }
 
@@ -289,6 +289,7 @@ img {
     border-radius: 40px;
     background-color: red;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 #header .search-box #search-text {
@@ -296,7 +297,7 @@ img {
     border: none;
     outline: none;
     background-color: transparent;
-    
+
     width: 0;
     transition: all 0.5s ease;
 }
@@ -551,7 +552,7 @@ footer {
 
 .modal {
     position: fixed;
-    top: 0;
+    top: var(--header-height);
     right: 0;
     left: 0;
     bottom: 0;
@@ -641,7 +642,7 @@ footer {
 
 .modal .gender-details .category .custom-dot {
     /* display: inline-block; */
-    /* hoặc cho thẻ cha (label) có display flex */
+    /* ho?c cho th? cha (label) c? display flex */
     width: 18px;
     height: 18px;
     background-color: #d9d9d9;
@@ -652,14 +653,14 @@ footer {
 }
 
 .modal .gender-details #dot-1:checked~
-/* .modal */
+    /* .modal */
 .category .one,
 .modal .gender-details #dot-2:checked~
-/* .modal */
+    /* .modal */
 .category .two,
 .modal .gender-details #dot-3:checked~
 
-/* .modal */
+    /* .modal */
 .category .three {
     border-color: #d9d9d9;
     background-color: #9b59b6;
@@ -763,7 +764,6 @@ footer {
     padding: 20px;
     color: var(--text-color);
 }
-
 #booking .ticket-select select {
     font-size: 16px;
     border: none;
@@ -913,7 +913,7 @@ footer {
     }
 
     #header .search-box {
-        margin-right: 30px; /* giữa nav_bar */
+        margin-right: 30px; /* gi?a nav_bar */
     }
 
     .hero-slide-item {

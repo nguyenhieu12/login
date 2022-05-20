@@ -39,7 +39,7 @@ public class AccountRegister {
     }
 
     @PostMapping("/create")
-    public String createAccount(HttpServletRequest request, HttpServletResponse response) throws SQLException {
+    public String createAccount(HttpServletRequest request) throws SQLException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String firstName = request.getParameter("first_name");

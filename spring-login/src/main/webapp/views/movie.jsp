@@ -8,17 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Movies</title>
     <!-- gg font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+    <link type="text/css" rel="preconnect" href="https://fonts.googleapis.com">
+    <link type="text/css" rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link type="text/css" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <!-- OWL CAROUSEL -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- BOX ICONS -->
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link type="text/css" href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <!-- app css -->
-    <link rel="stylesheet" href="/assets/css/grid.css">
-    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/assets/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/assets/css/app.css">
 </head>
 
 <body>
@@ -49,7 +49,7 @@
             <div class="owl-carousel carousel-nav-center" id="hero-carousel">
                 <!-- start slide item -->
                 <div class="hero-slide-item">
-                    <img src="/assets/img/movie1.jpg" alt="">
+                    <img src="<%=request.getContextPath()%>/assets/img/movie1.jpg" alt="">
                     <div class="overplay"></div>
                     <div class="hero-slide-item-content">
                         <div class="item-content-wrapper">
@@ -105,7 +105,7 @@
 
                 <!-- start slide item -->
                 <div class="hero-slide-item">
-                    <img src="/assets/img/Doctor-Strange-2-poster.jpg" alt="">
+                    <img src="<%=request.getContextPath()%>/assets/img/Doctor-Strange-2-poster.jpg" alt="">
                     <div class="overplay"></div>
                     <div class="hero-slide-item-content">
                         <div class="item-content-wrapper">
@@ -157,7 +157,7 @@
 
                 <!-- start slide item -->
                 <div class="hero-slide-item">
-                    <img src="/assets/img/movie3.jpg" alt="">
+                    <img src="<%=request.getContextPath()%>/assets/img/movie3.jpg" alt="">
                     <div class="overplay"></div>
                     <div class="hero-slide-item-content">
                         <div class="item-content-wrapper">
@@ -209,7 +209,7 @@
 
                 <!-- start slide item -->
                 <div class="hero-slide-item">
-                    <img src="/assets/img/movie4.jpg" alt="">
+                    <img src="<%=request.getContextPath()%>/assets/img/movie4.jpg" alt="">
                     <div class="overplay"></div>
                     <div class="hero-slide-item-content">
                         <div class="item-content-wrapper">
@@ -261,7 +261,7 @@
 
                 <!-- start slide item -->
                 <div class="hero-slide-item">
-                    <img src="/assets/img/movie5.jpg" alt="">
+                    <img src="<%=request.getContextPath()%>/assets/img/movie5.jpg" alt="">
                     <div class="overplay"></div>
                     <div class="hero-slide-item-content">
                         <div class="item-content-wrapper">
@@ -313,7 +313,7 @@
 
                 <!-- start slide item -->
                 <div class="hero-slide-item">
-                    <img src="/assets/img/movie6.jpg" alt="">
+                    <img src="<%=request.getContextPath()%>/assets/img/movie6.jpg" alt="">
                     <div class="overplay"></div>
                     <div class="hero-slide-item-content">
                         <div class="item-content-wrapper">
@@ -377,7 +377,7 @@
         <div class="owl-carousel carousel-nav-center" , id="detail-movies-slide">
             <!-- movie-item -->
             <div class="movie-item">
-                <img src="/assets/img/movie1.jpg" alt="">
+                <img src="<%=request.getContextPath()%>/assets/img/movie1.jpg" alt="">
                 <div class="movie-item-content">
                     <div class="movie-item-title">
                         Trang Quynh
@@ -424,7 +424,7 @@
 
             <!-- movie-item -->
             <div class="movie-item">
-                <img src="/assets/img/movie2.jpg" alt="">
+                <img src="<%=request.getContextPath()%>/assets/img/movie2.jpg" alt="">
                 <div class="movie-item-content">
                     <div class="movie-item-title">
                         phim 2
@@ -471,7 +471,7 @@
 
             <!-- movie-item -->
             <div class="movie-item">
-                <img src="/assets/img/movie3.jpg" alt="">
+                <img src="<%=request.getContextPath()%>/assets/img/movie3.jpg" alt="">
                 <div class="movie-item-content">
                     <div class="movie-item-title">
                         Phim 3
@@ -518,7 +518,7 @@
 
             <!-- movie-item -->
             <div class="movie-item">
-                <img src="/assets/img/movie4.jpg" alt="">
+                <img src="<%=request.getContextPath()%>/assets/img/movie4.jpg" alt="">
                 <div class="movie-item-content">
                     <div class="movie-item-title">
                         Phim 4
@@ -565,7 +565,7 @@
 
             <!-- movie-item -->
             <div class="movie-item">
-                <img src="/assets/img/movie5.jpg" alt="">
+                <img src="<%=request.getContextPath()%>/assets/img/movie5.jpg" alt="">
                 <div class="movie-item-content">
                     <div class="movie-item-title">
                         Phim 4
@@ -720,12 +720,12 @@
     <!-- SCRIPT -->
 
     <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- OWL CAROUSEL -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- APP SCRIPT -->
-    <script src="/assets/javascript/app.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/app.js"></script>
 </body>
 
 </html>
