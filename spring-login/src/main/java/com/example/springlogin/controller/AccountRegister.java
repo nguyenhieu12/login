@@ -74,4 +74,9 @@ public class AccountRegister {
 
         return "createsuccess";
     }
+
+    @PostMapping("goToHome")
+    public String goToHome() {
+        return "index";
+    }
 }

@@ -10,5 +10,8 @@
 </head>
 <body>
     <h1>Welcome new user !</h1>
+    <form method="post" action="goToHome">
+        <input type="submit" value="Go to home"/>
+    </form>
 </body>
 </html>

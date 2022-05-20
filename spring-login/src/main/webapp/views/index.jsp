@@ -34,7 +34,7 @@
     <!-- APP -->
     <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/style.css">
     <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/grid.css">
-    <!-- <link rel="stylesheet" href="./assets/css/app.css"> -->
+<%--    <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/app.css">--%>
 </head>
 
 <body>
