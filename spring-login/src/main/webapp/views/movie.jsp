@@ -669,50 +669,6 @@
                         </li>
                     </ul>
                 </div>
-                <!-- <div class="c-4 l-12 m-12">
-                    <div class="content">
-                        <a href="#" class="logo">
-                            <i class='bx bx-movie-play bx-tada main-color'></i><span class="main-color"></span>
-                        </a>
-                        <p>
-                            Ban quyen thuoc ve cac sinh vien nhom 10 hoc phan cong nghe
-                            phan mem UET
-                        </p>
-                        <div class="socical-list">
-                            <a href="#" class="social-item">
-                                <i class="bx bxl-facebook"></i>
-                            </a>
-                            <a href="#" class="social-item">
-                                <i class="bx bxl-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-8 col-md-12 col-sm-12">
-                    <div class="row">
-                        <div class="col-3 col-md-6 col-sm-12">
-                            <div class="content">
-
-                            </div>
-                        </div>
-                        <div class="col-3 col-md-6 col-sm-12">
-                            <div class="content">
-
-                            </div>
-                        </div>
-                        <div class="col-3 col-md-6 col-sm-12">
-                            <div class="content">
-
-                            </div>
-                        </div>
-                        <div class="col-3 col-md-6 col-sm-12">
-                            <div class="content">
-
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                
             </div>
         </div>
     </footer>

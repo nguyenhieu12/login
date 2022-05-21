@@ -34,7 +34,7 @@
     <!-- APP -->
     <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/style.css">
     <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/grid.css">
-<%--    <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/app.css">--%>
+    <!-- <link rel="stylesheet" href="./assets/css/app.css"> -->
 </head>
 
 <body>
@@ -48,7 +48,8 @@
         <li><a href="<%=request.getContextPath()%>/views/index.jsp">Home</a></li>
         <li><a href="#movies">Movies</a></li>
         <li><a href="<%=request.getContextPath()%>/views/booking.jsp">Bookings</a></li>
-        <li class="login-btn js-login-btn"><a>Login</a></li>
+        <!-- <li class="login-btn js-login-btn"><a>Login</a></li> -->
+        <li class="login-btn"><a href="<%=request.getContextPath()%>/views/login.jsp">Login</a></li>
     </ul>
 
 
@@ -579,10 +580,11 @@
 
 <!-- Movies Section -->
 <div id="movies">
-    <div class="container">
-        <!-- Movies seaction title -->
-        <div class="movies-section-title"></div>
+    <!-- Movies seaction title -->
+    <div class="movies-section-title"></div>
 
+    <!-- Content -->
+    <div class="container">
         <!-- Movies list -->
         <div class="owl-carousel carousel-nav-center" , id="detail-movies-slide">
             <!-- movie-item -->
@@ -823,192 +825,88 @@
     </div>
 </div>
 
+<!-- Footer -->
 <footer id="footer" class="footer grid">
     <div class="row footer-infos">
-        <div class="col l-3 m-3 c-12 footer-info">
-            <a href="#" class="logo">
+        <!-- About -->
+        <div class="col l-3 m-6 c-12 footer-info">
+            <!-- <a href="#" class="logo">
                 <i class='bx bx-movie-play bx-tada main-color'></i><span class="main-color"></span>
-            </a>
+            </a> -->
+            <h2 class="footer-title">About us</h2>
             <p class="text-des">
-                Bản quyền thuộc về 5 sinh viên nhóm 10 của lớp học phần Công nghệ phần mềm
-                (INT2208E-22) thuộc khoa công nghệ thông tin trường đại học công nghệ- đại học quốc gia Hà Nội
+                Software Engineering subject project (INT2208E-22) of students in group 10, Faculty of Information Technology, University of Engineering and Technology - Vietnam National University, Hanoi. This software is intended to help you easily book movie tickets at home.
             </p>
             <div class="socical-list">
-                <a href="#" class="social-item">
-                    <i class="bx bxl-facebook"></i>
-                </a>
-                <a href="#" class="social-item">
-                    <i class="bx bxl-instagram"></i>
-                </a>
+                <a href="#" class="social-item"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-item"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-item"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-item"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-        <div class="col l-3 m-3 c-12 footer-info">
-            <h2 class="footer-heading">Chịu trách nhiệm sản xuất</h2>
-            <ul class="footer-list">
-                <li class="footer-item">
-                    <a href="https://github.com/dawnpanpan" class="footer-item-link personal">Đào Trọng Đăng</a>
+
+        <!-- Team members -->
+        <div class="col l-3 m-6 c-12 footer-info">
+            <h2 class="footer-title">Team members</h2>
+            <ul class="members-list">
+                <li class="member-item">
+                    <a href="https://github.com/dawnpanpan" class="member-item-link personal">Đào Trọng Đăng</a>
                 </li>
-                <li class="footer-item">
-                    <a href="https://github.com/quyendv" class="footer-item-link personal">Đào Văn Quyền</a>
+                <li class="member-item">
+                    <a href="https://github.com/quyendv" class="member-item-link personal">Đào Văn Quyền</a>
                 </li>
-                <li class="footer-item">
-                    <a href="https://github.com/duytv2501" class="footer-item-link personal">Trần Văn Duy</a>
+                <li class="member-item">
+                    <a href="https://github.com/duytv2501" class="member-item-link personal">Trần Văn Duy</a>
                 </li>
-                <li class="footer-item">
-                    <a href="https://github.com/nguyenhieu12" class="footer-item-link personal">Nguyễn Minh
+                <li class="member-item">
+                    <a href="https://github.com/nguyenhieu12" class="member-item-link personal">Nguyễn Minh
                         Hiếu</a>
                 </li>
-                <li class="footer-item">
-                    <a href="https://github.com/tuantuan4" class="footer-item-link personal">Lê Anh Tuấn</a>
+                <li class="member-item">
+                    <a href="https://github.com/tuantuan4" class="member-item-link personal">Lê Anh Tuấn</a>
                 </li>
             </ul>
         </div>
-        <div class="col l-3 m-3 c-12 footer-info">
-            <h2 class="footer-heading">Hợp tác</h2>
-        </div>
-        <div class="col l-3 m-3 c-12 footer-info">
-            <h2 class="footer-heading">Chăm sóc khách hàng</h2>
-            <ul class="footer-list">
-                <li class="footer-item">
-                    <a href="" class="footer-item-link personal">Trung tâm trợ giúp</a>
+
+        <!-- Address -->
+        <div class="col l-3 m-6 c-12 footer-info">
+            <h2 class="footer-title">Address</h2>
+            <ul class="address-infos">
+                <li class="address-info">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="address-details">Cầu Giấy, Hà Nội, Việt Nam</span>
                 </li>
-                <li class="footer-item">
-                    <a href="" class="footer-item-link personal">Chăm sóc khách hàng</a>
+                <li class="address-info">
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="address-details">+84 xxx xxx xxx</span>
+                </li>
+                <li class="address-info">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="address-details">abc@example.com</span>
                 </li>
             </ul>
         </div>
+
+        <!-- Contact -->
+        <div class="col l-3 m-6 c-12 footer-info">
+            <h2 class="footer-title">Contact</h2>
+            <form action="" class="form-contact">
+                <div class="contact-box">
+                    <label for="">Email *</label>
+                    <input type="email" name="" id="" required>
+                </div>
+
+                <div class="contact-box">
+                    <label for="">Message *</label>
+                    <textarea rows="3" required></textarea>
+                </div>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
     </div>
 </footer>
-
-<!-- Modal Login/Register-->
-<div class="login-register" id="login-register">
-    <div class="modal js-modal login js-login">
-        <div class="modal__container js-modal__container">
-            <!-- icon -->
-            <div class="modal__close-btn js-modal__close-btn">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-
-            <!-- Title -->
-            <h1 class="heading">Login</h1>
-
-            <!-- Content -->
-            <div class="content">
-                <form action="login" method="post">
-                    <div class="user-details">
-                        <div class="input-box">
-                            <label for="" class="info">User name</label>
-                            <input type="text" placeholder="Enter your username" name="username" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Password</label>
-                            <input type="password" placeholder="Enter your password" name="password" required>
-                        </div>
-
-                    </div>
-
-                    <div class="submit-btn">
-                        <input type="submit" value="Submit" class="submit js-submit">
-                    </div>
-                    <button class="register-btn js-register-btn">Don't have an account?</button>
-                </form>
-            </div>
-
-
-        </div>
-    </div>
-
-    <div class="modal js-modal register js-register">
-        <div class="modal__container js-modal__container">
-            <!-- icon -->
-            <div class="modal__close-btn js-modal__close-btn">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-
-            <div class="modal__goback js-login-btn">
-                <i class='bx bx-arrow-back'></i>
-            </div>
-
-            <!-- Title -->
-            <h1 class="heading">Register</h1>
-
-            <!-- Content -->
-            <div class="content">
-                <form action="create" method="post">
-                    <div class="user-details">
-                        <div class="input-box">
-                            <label for="" class="info">User Name</label>
-                            <input type="text" placeholder="Enter your username" name="username" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Password</label>
-                            <input type="password" placeholder="Enter your password" name="password" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Confirm Password</label>
-                            <input type="password" placeholder="Confirm your password" name="confirm_password" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">First Name</label>
-                            <input type="text" placeholder="Enter your first name" name="first_name" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Last Name</label>
-                            <input type="text" placeholder="Enter your last name" name="last_name" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Date of Birth</label>
-                            <input type="date" placeholder="Enter your birthday" name="date_of_birth" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Email</label>
-                            <input type="email" placeholder="Enter your email" name="email" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Phone Number</label>
-                            <input type="tel" placeholder="Enter your number" name="phone" required pattern="[0-9]{10}">
-                        </div>
-                    </div>
-
-                    <div class="gender-details">
-                        <input type="radio" name="gender" id="dot-1">
-                        <input type="radio" name="gender" id="dot-2">
-                        <input type="radio" name="gender" id="dot-3">
-
-                        <span class="gender-title">Gender</span>
-
-                        <div class="category">
-                            <label for="dot-1">
-                                <span class="custom-dot one"></span>
-                                <span class="gender">Male</span>
-                            </label>
-                            <label for="dot-2">
-                                <span class="custom-dot two"></span>
-                                <span class="gender">Female</span>
-                            </label>
-                            <label for="dot-3">
-                                <span class="custom-dot three"></span>
-                                <span class="gender">Prefer not to say</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="submit-btn">
-                        <input type="submit" value="Submit">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Link js -->
 <!-- JQUERY -->
@@ -1025,5 +923,6 @@
 <!-- APP SCRIPT -->
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/app.js"></script>
 </body>
+
 
 </html>
