@@ -74,30 +74,27 @@
             </div>
 
             <!-- Title -->
-            <h1 class="heading">Login</h1>
+            <h1 class="heading">Reset password</h1>
 
             <!-- Content -->
             <div class="content">
-                <form action="/login" method="post">
+                <form action="/set_new_password" method="post">
                     <div class="user-details">
                         <div class="input-box">
                             <label for="" class="info">User name</label>
-                            <input type="text" placeholder="Enter your username" name="username" required>
+                            <input type="password" placeholder="Enter your new password" name="new_password" required>
                         </div>
 
                         <div class="input-box">
-                            <label for="" class="info">Password</label>
-                            <input type="password" placeholder="Enter your password" name="password" required>
+                            <label for="" class="info">Email</label>
+                            <input type="password" placeholder="Confirm your new password" name="confirm_password" required>
                         </div>
 
                     </div>
 
                     <div class="submit-btn">
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Send request" class="submit js-submit">
                     </div>
-                    <!-- <button class="register-btn js-register-btn">Don't have an account?</button> -->
-                    <a class="register-btn js-register-btn" href="<%=request.getContextPath()%>/views/register.jsp">Don't have an account ?</a>
-                    <a class="register-btn js-register-btn" href="<%=request.getContextPath()%>/views/reset_password.jsp">Forgot password ?</a>
                 </form>
             </div>
         </div>

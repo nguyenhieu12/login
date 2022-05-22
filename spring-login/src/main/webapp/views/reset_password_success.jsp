@@ -44,7 +44,7 @@
         <li><a href="<%=request.getContextPath()%>/views/index.jsp#movies">Movies</a></li>
         <li><a href="<%=request.getContextPath()%>/views/booking.jsp">Bookings</a></li>
         <!-- <li class="login-btn js-login-btn"><a>Login</a></li> -->
-        <li class="login-btn js-login-btn"><a href="<%=request.getContextPath()%>/views/login.jsp">Login</a></li>
+        <li class="login-btn js-login-btn"><a href="<%=request.getContextPath()%>/views/reset_password.jsp">Login</a></li>
     </ul>
 
 
@@ -68,37 +68,11 @@
     <!-- Login -->
     <div class="modal open js-modal login js-login">
         <div class="modal__container js-modal__container">
-            <!-- icon -->
-            <div class="modal__close-btn js-modal__close-btn">
-                <a href="<%=request.getContextPath()%>/views/index.jsp"><i class="fa-solid fa-xmark"></i></a>
-            </div>
-
-            <!-- Title -->
-            <h1 class="heading">Login</h1>
+            <h1 class="heading">Reset password successful !</h1>
 
             <!-- Content -->
             <div class="content">
-                <form action="/login" method="post">
-                    <div class="user-details">
-                        <div class="input-box">
-                            <label for="" class="info">User name</label>
-                            <input type="text" placeholder="Enter your username" name="username" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Password</label>
-                            <input type="password" placeholder="Enter your password" name="password" required>
-                        </div>
-
-                    </div>
-
-                    <div class="submit-btn">
-                        <input type="submit" value="Submit">
-                    </div>
-                    <!-- <button class="register-btn js-register-btn">Don't have an account?</button> -->
-                    <a class="register-btn js-register-btn" href="<%=request.getContextPath()%>/views/register.jsp">Don't have an account ?</a>
-                    <a class="register-btn js-register-btn" href="<%=request.getContextPath()%>/views/reset_password.jsp">Forgot password ?</a>
-                </form>
+                <a class="register-btn js-register-btn" href="<%=request.getContextPath()%>/views/login.jsp">Go to login</a>
             </div>
         </div>
     </div>

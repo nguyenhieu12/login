@@ -10,12 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
 
 @Controller
@@ -26,15 +23,8 @@ public class AccountRegister {
     @Autowired
     private AccountService accountService;
 
-//    @RequestMapping("/")
-//    public String homePage() {
-//        return "index";
-//    }
-
     @GetMapping("/create")
     public String showAccount(Model model) {
-//        Account account = new Account("hieu1234", "hieu@@", "active");
-//        model.addAttribute("account", account);
         return "create";
     }
 
@@ -53,7 +43,7 @@ public class AccountRegister {
             return "createfailed"; // create error
         }
 
-        ResultSet resultSet = DatabaseConnection.connect();
+        ResultSet resultSet = DatabaseConnection.connect("select * from account");
 
         try {
             while(resultSet.next()) {

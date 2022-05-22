@@ -74,11 +74,11 @@
             </div>
 
             <!-- Title -->
-            <h1 class="heading">Login</h1>
+            <h1 class="heading">Reset password</h1>
 
             <!-- Content -->
             <div class="content">
-                <form action="/login" method="post">
+                <form action="/reset_password" method="post">
                     <div class="user-details">
                         <div class="input-box">
                             <label for="" class="info">User name</label>
@@ -86,18 +86,15 @@
                         </div>
 
                         <div class="input-box">
-                            <label for="" class="info">Password</label>
-                            <input type="password" placeholder="Enter your password" name="password" required>
+                            <label for="" class="info">Email</label>
+                            <input type="text" placeholder="Enter your email" name="email" required>
                         </div>
 
                     </div>
 
                     <div class="submit-btn">
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Send request" class="submit js-submit">
                     </div>
-                    <!-- <button class="register-btn js-register-btn">Don't have an account?</button> -->
-                    <a class="register-btn js-register-btn" href="<%=request.getContextPath()%>/views/register.jsp">Don't have an account ?</a>
-                    <a class="register-btn js-register-btn" href="<%=request.getContextPath()%>/views/reset_password.jsp">Forgot password ?</a>
                 </form>
             </div>
         </div>

@@ -1,7 +1,5 @@
 package com.example.springlogin.model;
 
-import com.sun.istack.NotNull;
-
 import javax.persistence.*;
 import java.io.Serializable;
 

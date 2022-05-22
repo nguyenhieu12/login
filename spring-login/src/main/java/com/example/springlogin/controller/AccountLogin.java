@@ -1,24 +1,23 @@
 package com.example.springlogin.controller;
 
+import com.example.springlogin.database.CheckLogged;
 import com.example.springlogin.database.DatabaseConnection;
-import com.example.springlogin.model.Account;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 @Controller
 public class AccountLogin {
+    @Autowired
+    private JavaMailSender mailSender;
+
     @GetMapping("/login")
     public String showAccount(Model model) {
         return "login";
@@ -26,21 +25,23 @@ public class AccountLogin {
 
     @PostMapping("/login")
     public String login(HttpServletRequest request) throws SQLException {
+        System.out.println(CheckLogged.LOGGED_USERNAME);
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-
-        System.out.println(username + " " + password);
 
         if(username.isEmpty() || password.isEmpty())
             return "loginfailed";
 
-        ResultSet resultSet = DatabaseConnection.connect();
+        ResultSet resultSet = DatabaseConnection.connect("select * from account");
 
         try {
             while(resultSet.next()) {
                 if(username.equals(resultSet.getString("username"))) {
                     if(password.equals(resultSet.getString("password"))) {
-                        return "loginsuccess";
+                        CheckLogged.setLoggedStatus(true);
+                        CheckLogged.setLoggedUsername(username);
+                        System.out.println(CheckLogged.LOGGED_USERNAME);
+                        return "logged_index";
                     }
                 }
             }
@@ -48,55 +49,131 @@ public class AccountLogin {
             e.printStackTrace();
         }
 
-
-
         return "loginfailed";
     }
 
     @PostMapping("/logout")
     public String logout() {
+        System.out.println(CheckLogged.LOGGED_USERNAME);
+        CheckLogged.setLoggedUsername("");
+        CheckLogged.setLoggedStatus(false);
+        System.out.println(CheckLogged.LOGGED_USERNAME);
         return "index";
     }
-}
 
-//@WebServlet("/login")
-//public class AccountLogin extends HttpServlet {
-//    @Override
-//    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String username = request.getParameter("username");
-//        String password = request.getParameter("password");
-//
-//        System.out.println(username + " " + password);
-//
-//        if(username.isEmpty() || password.isEmpty())
-//            response.sendRedirect("loginfailed.jsp");
-//
-//        ResultSet resultSet = null;
-//        try {
-//            resultSet = DatabaseConnection.connect();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-//        try {
-//            while(resultSet.next()) {
-//                if(username.equals(resultSet.getString("username"))) {
-//                    if(password.equals(resultSet.getString("password"))) {
-//                        response.sendRedirect("loginsuccess.jsp");
-//                    }
-//                }
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//
-//        response.sendRedirect("loginfailed.jsp");
-//
-//        //super.doGet(req, resp);
-//    }
-//
-//    @Override
-//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        //super.doPost(req, resp);
-//    }
-//}
+    @PostMapping("/change_password")
+    public String changePassword(HttpServletRequest request) throws SQLException {
+        String password = request.getParameter("password");
+        String new_password = request.getParameter("new_password");
+        String confirm_password = request.getParameter("confirm_password");
+
+        if(password.isEmpty() || new_password.isEmpty()
+                || confirm_password.isEmpty() || !new_password.equals(confirm_password))
+            return "change_password";
+
+        ResultSet resultSet = DatabaseConnection.connect("select * from account");
+
+        try {
+            while (resultSet.next()) {
+                if(resultSet.getString("username").equals(CheckLogged.LOGGED_USERNAME)) {
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testlogin1",
+                            "root", "hieu6969" );
+                    String sql = "UPDATE account SET password = ? WHERE username = ?";
+                    PreparedStatement pstmt = connection.prepareStatement(sql);
+                    pstmt.setString(1, new_password);
+                    pstmt.setString(2, CheckLogged.LOGGED_USERNAME);
+                    pstmt.executeUpdate();
+                    return "change_success";
+                }
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return "change_password";
+    }
+
+    @PostMapping("/reset_password")
+    public String resetPassword(HttpServletRequest request) throws SQLException {
+        String username = request.getParameter("username");
+        String email = request.getParameter("email");
+
+        if(username.isEmpty() || email.isEmpty())
+            return "reset_password";
+
+        ResultSet resultSetAccount = DatabaseConnection.connect("select * from account");
+
+        ResultSet resultSetUser = DatabaseConnection.connect("select * from user");
+
+        try {
+            while(resultSetAccount.next() && resultSetUser.next()) {
+                if(resultSetAccount.getString("username").equals(username)) {
+                    CheckLogged.setResetPasswordUsername(username);
+                    long id = resultSetAccount.getLong("account_id");
+                    String sqlEmail = resultSetUser.getString("email");
+                    System.out.println(sqlEmail);
+                    if (sqlEmail.equals(email)) {
+                        double randomDouble = Math.random();
+                        randomDouble = randomDouble * 100 + 1;
+                        int confirm_code = (int) randomDouble;
+                        CheckLogged.setConfirmCode(String.valueOf(confirm_code));
+
+                        SimpleMailMessage message = new SimpleMailMessage();
+
+                        message.setTo(email);
+                        message.setSubject("Mã xác nhận lấy lại mật khẩu");
+                        message.setText("Anh bạn à, lại quên mật khẩu à\nMã xác nhận của ông đây: " + confirm_code);
+
+                        mailSender.send(message);
+
+                        return "reset_password_confirm";
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return "reset_password";
+    }
+
+    @PostMapping("/reset_password_confirm")
+    public String resetPasswordConfirm(HttpServletRequest request) {
+        if(CheckLogged.CONFIRM_CODE.equals(request.getParameter("confirm_code"))) {
+            return "set_new_password";
+        }
+        return "reset_password_confirm";
+    }
+
+    @PostMapping("/set_new_password")
+    public String setNewPassword(HttpServletRequest request) throws SQLException {
+        String new_password = request.getParameter("new_password");
+        String confirm_password = request.getParameter("confirm_password");
+
+        if(new_password.isEmpty() || confirm_password.isEmpty() || !new_password.equals(confirm_password))
+            return "set_new_password";
+
+        ResultSet resultSet = DatabaseConnection.connect("select * from account");
+
+        try {
+            while (resultSet.next()) {
+                if(resultSet.getString("username").equals(CheckLogged.RESET_PASSWORD_USERNAME)) {
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testlogin1",
+                            "root", "hieu6969" );
+                    String sql = "UPDATE account SET password = ? WHERE username = ?";
+                    PreparedStatement pstmt = connection.prepareStatement(sql);
+                    pstmt.setString(1, new_password);
+                    pstmt.setString(2, CheckLogged.RESET_PASSWORD_USERNAME);
+                    pstmt.executeUpdate();
+                    return "reset_password_success";
+                }
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return "set_new_password";
+    }
+}
