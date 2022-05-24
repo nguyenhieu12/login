@@ -405,7 +405,7 @@
 
             <!-- start slide item -->
             <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>/assets/img/hero/hero7.png" alt="">
+                <img src="<%=request.getContextPath()%>E/assets/img/hero/hero7.png" alt="">
                 <div class="overplay"></div>
                 <div class="hero-slide-item-content">
                     <div class="item-content-wrapper">

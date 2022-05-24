@@ -39,7 +39,6 @@ public class AccountLogin {
                     if(password.equals(resultSet.getString("password"))) {
                         CheckLogged.setLoggedStatus(true);
                         CheckLogged.setLoggedUsername(username);
-                        System.out.println(CheckLogged.LOGGED_USERNAME);
                         return "logged_index";
                     }
                 }

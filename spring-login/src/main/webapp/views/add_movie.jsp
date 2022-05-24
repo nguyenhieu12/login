@@ -1,3 +1,4 @@
+<%@ page import="com.example.springlogin.database.CheckLogged" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,6 +47,8 @@
         <li class="login-btn"><a href="<%=request.getContextPath()%>/views/index.jsp">Logout</a></li>
         <li class="login-btn"><a href="<%=request.getContextPath()%>/views/change_password.jsp">Change password</a></li>
         <li class="login-btn"><a href="<%=request.getContextPath()%>/views/add_movie.jsp">Add movie</a></li>
+        <li style="color: fuchsia"><h1>${CheckLogged.LOGGED_USERNAME}</h1></li>
+        <li><image src="<%=request.getContextPath()%>/assets/img/user_logo.png"></image></li>
     </ul>
 
 
