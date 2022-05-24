@@ -102,7 +102,10 @@
 
                         </div>
                         <div class="item-content-description top-down delay-4">
-                            Đây là bộ phim hiếm hoi của Walt Disney có khắc họa một nhân vật phản diện điển hình trong một bộ phim nổi tiếng,mụ phù thủy Maleficent trong tác phẩm hoạt hình kinh điển“Sleeping Beauty”.Bộ phim sẽ lần đầu tiết lộ sự thật đằng sau số phận bi kịch của người phụ nữ vốn có trái tim thuần khiết này cũng như chân tướng của sự phản bội đã khiến trái tim của bà hóa đá.
+                            Đây là bộ phim hiếm hoi của Walt Disney có khắc họa một nhân vật phản diện điển hình trong một bộ phim nổi tiếng,
+                            mụ phù thủy Maleficent trong tác phẩm hoạt hình kinh điển“Sleeping Beauty”.Bộ phim sẽ lần đầu tiết lộ sự thật đằng
+                            sau số phận bi kịch của người phụ nữ vốn có trái tim thuần khiết này cũng như chân tướng của sự phản bội đã khiến trái
+                            tim của bà hóa đá.
                         </div>
                         <div class="combo-button top-down delay-6">
                             <div class="item-action">

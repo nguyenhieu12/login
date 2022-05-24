@@ -43,10 +43,12 @@
   <ul class="navigation">
     <li><a href="<%=request.getContextPath()%>/views/logged_index.jsp">Home</a></li>
     <li><a href="#movies">Movies</a></li>
-    <li><a href="<%=request.getContextPath()%>/views/logged_booking.jsp">Bookings</a></li>
+    <li><a href="<%=request.getContextPath()%>/views/booking.jsp">Bookings</a></li>
     <li class="login-btn"><a href="<%=request.getContextPath()%>/views/index.jsp">Logout</a></li>
     <li class="login-btn"><a href="<%=request.getContextPath()%>/views/change_password.jsp">Change password</a></li>
     <li class="login-btn"><a href="<%=request.getContextPath()%>/views/add_movie.jsp">Add movie</a></li>
+    <li style="color: fuchsia"><h1>${CheckLogged.LOGGED_USERNAME}</h1></li>
+    <li><image src="<%=request.getContextPath()%>/assets/img/user_logo.png"></image></li>
   </ul>
 
 
@@ -72,7 +74,7 @@
     <div class="modal__container js-modal__container">
       <!-- icon -->
       <!-- Title -->
-      <h1 class="heading">Change password successful\ !</h1>
+      <h1 class="heading">Add movie successful !</h1>
 
       <!-- Content -->
       <div class="content">

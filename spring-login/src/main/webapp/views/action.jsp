@@ -1,10 +1,4 @@
-<%@ page import="com.example.springlogin.database.CheckLogged" %><%--
-  Created by IntelliJ IDEA.
-  User: PC
-  Date: 5/23/2022
-  Time: 8:19 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.example.springlogin.database.CheckLogged" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

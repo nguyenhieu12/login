@@ -1,14 +1,17 @@
 package com.example.springlogin.configuration;
 
+import com.example.springlogin.model.Movie;
+import com.example.springlogin.service.MovieService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
+import java.util.List;
 import java.util.Properties;
 
 @Configuration
-public class MailConfig {
+public class AllConfig {
 
     @Bean
     public JavaMailSender getJavaMailSender() {
@@ -27,6 +30,36 @@ public class MailConfig {
         props.put("mail.smtp.ssl.protocols", "TLSv1.2");
 
         return mailSender;
+    }
+
+    @Bean
+    public MovieService getMovieService() {
+        return new MovieService() {
+            @Override
+            public List<Movie> getAllMovies(Movie movie) {
+                return null;
+            }
+
+            @Override
+            public Movie getMovieByName(String movie_name) {
+                return null;
+            }
+
+            @Override
+            public void addMovie(Movie movie) {
+
+            }
+
+            @Override
+            public void updateUserByName(Movie movie, String movie_name) {
+
+            }
+
+            @Override
+            public void deleteUserByName(String movie_name) {
+
+            }
+        };
     }
 
 }

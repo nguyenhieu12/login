@@ -48,7 +48,7 @@
     <ul class="navigation">
         <li><a href="<%=request.getContextPath()%>/views/logged_index.jsp">Home</a></li>
         <li><a href="#movies">Movies</a></li>
-        <li><a href="<%=request.getContextPath()%>/views/logged_booking.jsp">Bookings</a></li>
+        <li><a href="<%=request.getContextPath()%>/views/booking.jsp">Bookings</a></li>
         <li class="login-btn"><a href="<%=request.getContextPath()%>/views/index.jsp">Logout</a></li>
         <li class="login-btn"><a href="<%=request.getContextPath()%>/views/change_password.jsp">Change password</a></li>
         <li class="login-btn"><a href="<%=request.getContextPath()%>/views/action.jsp">Add movie</a></li>

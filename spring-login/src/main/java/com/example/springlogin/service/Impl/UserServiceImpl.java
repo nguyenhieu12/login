@@ -1,14 +1,11 @@
 package com.example.springlogin.service.Impl;
 
-import com.example.springlogin.model.Account;
 import com.example.springlogin.model.User;
-import com.example.springlogin.repository.AccountRepository;
 import com.example.springlogin.repository.UserRepository;
 import com.example.springlogin.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 

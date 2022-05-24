@@ -36,11 +36,14 @@
     </a>
 
     <ul class="navigation">
-        <li><a href="<%=request.getContextPath()%>/views/index.jsp">Home</a></li>
-        <li><a href="<%=request.getContextPath()%>/views/index.jsp#movies">Movies</a></li>
-        <li><a href="<%=request.getContextPath()%>/views/booking.jsp">Bookings</a></li>
-        <!-- <li class="login-btn js-login-btn"><a>Login</a></li> -->
-        <li class="login-btn"><a href="<%=request.getContextPath()%>/views/login.jsp">Login</a></li>
+        <li><a href="<%=request.getContextPath()%>/views/logged_index.jsp">Home</a></li>
+        <li><a href="<%=request.getContextPath()%>/views/logged_index.jsp#movies">Movies</a></li>
+        <li><a href="<%=request.getContextPath()%>/views/logged_booking.jsp">Bookings</a></li>
+        <li class="login-btn"><a href="<%=request.getContextPath()%>/views/index.jsp">Logout</a></li>
+        <li class="login-btn"><a href="<%=request.getContextPath()%>/views/change_password.jsp">Change password</a></li>
+        <li class="login-btn"><a href="<%=request.getContextPath()%>/views/add_movie.jsp">Add movie</a></li>
+        <li style="color: fuchsia"><h1>${CheckLogged.LOGGED_USERNAME}</h1></li>
+        <li><image src="<%=request.getContextPath()%>/assets/img/user_logo.png"></image></li>
     </ul>
 
 
