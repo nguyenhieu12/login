@@ -1,4 +1,4 @@
-package com.example.springlogin.controller;
+package com.example.springlogin.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

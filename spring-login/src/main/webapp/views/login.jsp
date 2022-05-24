@@ -95,7 +95,6 @@
                     <div class="submit-btn">
                         <input type="submit" value="Submit">
                     </div>
-                    <!-- <button class="register-btn js-register-btn">Don't have an account?</button> -->
                     <a class="register-btn js-register-btn" href="<%=request.getContextPath()%>/views/register.jsp">Don't have an account ?</a>
                     <a class="register-btn js-register-btn" href="<%=request.getContextPath()%>/views/reset_password.jsp">Forgot password ?</a>
                 </form>
@@ -107,7 +106,7 @@
 <!-- Main script -->
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/main.js"></script>
 <!-- APP SCRIPT -->
-<script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/app.js"></script>
+<%--<script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/app.js"></script>--%>
 </body>
 
 </html>

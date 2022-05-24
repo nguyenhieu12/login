@@ -3,9 +3,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>MTBS</title>
 
@@ -15,33 +15,34 @@
     <!-- GG font Cario -->
     <link type="text/css" rel="preconnect" href="https://fonts.googleapis.com">
     <link type="text/css" rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link type="text/css" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link type="text/css" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+          rel="stylesheet">
 
     <!-- Fontawesome -->
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Box icons -->
     <link type="text/css" href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- App -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/style.css">
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/grid.css">
+    <!-- APP -->
+    <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/grid.css">
 </head>
 
 <body>
-<!-- Header -->
 <div id="header">
     <a href="#" class="logo">
         <i class='logo-icon bx bx-movie-play bx-tada'></i>
     </a>
 
     <ul class="navigation">
-        <li><a href="<%=request.getContextPath()%>/views/logged_index.jsp">Home</a></li>
-        <li><a href="<%=request.getContextPath()%>/views/logged_index.jsp#movies">Movies</a></li>
-        <li><a href="<%=request.getContextPath()%>/views/logged_booking.jsp">Bookings</a></li>
-        <li class="login-btn"><a href="<%=request.getContextPath()%>/views/index.jsp">Logout</a></li>
-        <li class="login-btn"><a href="<%=request.getContextPath()%>/views/change_password.jsp">Change password</a></li>
-        <li class="login-btn"><a href="<%=request.getContextPath()%>/views/add_movie.jsp">Add movie</a></li>
+        <li><a href="<%=request.getContextPath()%>/views/index.jsp">Home</a></li>
+        <li><a href="#movies">Movies</a></li>
+        <li><a href="<%=request.getContextPath()%>/views/booking.jsp">Bookings</a></li>
+        <!-- <li class="login-btn js-login-btn"><a>Login</a></li> -->
+        <li class="login-btn"><a href="<%=request.getContextPath()%>/views/login.jsp">Login</a></li>
     </ul>
 
 
@@ -60,115 +61,52 @@
     </div>
 </div>
 
-<div id="booking">
+<div class="payment-section">
+    <div class="payment-section-wrapper grid wide">
+        <div class="payment-section-container row">
+            <!-- col1 :Infos -->
+            <div class="col l-6 m-5 c-12 payment-content">
+                <div class="payment-movie-infos">
+                    <h3 class="payment-movie-name">PHÙ THỦY TỐI THƯỢNG TRONG ĐA VŨ TRỤ HỖN LOẠN</h3>
+                    <p class="payment-movie-date">Wednesday, 04 May, 2022</p>
+                    <p class="payment-movie-time">20:00 ~ 22:06 / 2giờ 6phút</p>
+                </div>
+                <div class="payment-cinema-infos">
+                    <label class="cinema-name">Rạp CGV</label>
+                    <p class="cinema-details">CGV Vincom Sky Lake Phạm Hùng</p>
+                </div>
 
-    <ul class="seat-status">
-        <li>
-            <div class="seat premium"></div>
-            <p>Premium</p>
-        </li>
+                <div class="payment-movie-room">
+                    <div class="payment-room-info">
+                        <label>Ghế</label><span>D12, D13, D14, D15</span>
+                    </div>
 
-        <li>
-            <div class="seat regular"></div>
-            <p>Regular</p>
-        </li>
+                    <div class="payment-room-info">
+                        <label>Phòng chiếu</label><span>Cinema 2</span>
+                    </div>
+                </div>
 
-        <li>
-            <div class="seat selected"></div>
-            <p>Selected</p>
-        </li>
+                <div class="payment-price">
+                    <label>Số tiền</label>
+                    <i class="fa-solid fa-money-bill"></i>
+                    <span>420.000đ</span>
+                </div>
+            </div>
 
-        <li>
-            <div class="seat occupied"></div>
-            <p>Occupied</p>
-        </li>
-    </ul>
+            <!-- col2 :QR -->
+            <div class="col l-o-0 l-6 m-o-2 m-5 c-12 payment-action">
+                <h2>Quét mã để thành toán</h2>
 
-    <div class="container">
-        <div class="screen"></div>
+                <div class="qr-code">
+                    <img src="<%=request.getContextPath()%>/assets/img/payment/download.gif" alt="">
+                </div>
 
-        <div class="row-seat">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
+                <p>Sử dụng App <span>MoMo</span> hoặc ứng dụng Camera hỗ trợ QR code để quét mã.</p>
 
-        <div class="row-seat">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat occupied"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat occupied"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
-
-        <div class="row-seat">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
-
-        <div class="row-seat">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
-
-        <div class="row-seat">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
-
-        <div class="row-seat">
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
-        </div>
-
-        <div class="row-seat">
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
-            <div class="seat premium"></div>
+                <div class="loading"><i class="fa fa-spinner fa-spin"></i>Đang chờ bạn quét...</div>
+            </div>
         </div>
     </div>
-
-    <p class="detail">
-        You have selected <span class="count">0</span> seats for a price of
-        $<span class="total">0</span>
-    </p>
 </div>
 
 <!-- Footer -->
@@ -176,9 +114,6 @@
     <div class="row footer-infos">
         <!-- About -->
         <div class="col l-3 m-6 c-12 footer-info">
-            <!-- <a href="#" class="logo">
-                <i class='bx bx-movie-play bx-tada main-color'></i><span class="main-color"></span>
-            </a> -->
             <h2 class="footer-title">About us</h2>
             <p class="text-des">
                 Software Engineering subject project (INT2208E-22) of students in group 10, Faculty of Information Technology, University of Engineering and Technology - Vietnam National University, Hanoi. This software is intended to help you easily book movie tickets at home.
@@ -252,9 +187,11 @@
         </div>
 
     </div>
+
+    <p class="copyright">Copyright © 2022 - Team 10 - All Rights Reversed.</p>
 </footer>
 
-<script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/booking.js"></script>
+<!-- Link JS -->
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/main.js"></script>
 </body>
 

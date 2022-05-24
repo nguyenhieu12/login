@@ -27,7 +27,7 @@ public class User implements Serializable {
     private String date_of_birth;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = false)
-    @JoinColumn(name = "fk_account_id", referencedColumnName = "account_id", nullable = false)
+    @JoinColumn(name = "fk_accid", referencedColumnName = "account_id", nullable = false)
     private Account account;
 
     public User() {

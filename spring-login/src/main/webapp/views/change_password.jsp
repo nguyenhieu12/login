@@ -45,6 +45,7 @@
         <li><a href="<%=request.getContextPath()%>/views/logged_booking.jsp">Bookings</a></li>
         <li class="login-btn"><a href="<%=request.getContextPath()%>/views/index.jsp">Logout</a></li>
         <li class="login-btn"><a href="<%=request.getContextPath()%>/views/change_password.jsp">Change password</a></li>
+        <li class="login-btn"><a href="<%=request.getContextPath()%>/views/add_movie.jsp">Add movie</a></li>
     </ul>
 
 
@@ -74,7 +75,7 @@
             </div>
 
             <!-- Title -->
-            <h1 class="heading">Login</h1>
+            <h1 class="heading">Change password</h1>
 
             <!-- Content -->
             <div class="content">

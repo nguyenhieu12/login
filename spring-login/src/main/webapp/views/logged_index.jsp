@@ -50,6 +50,9 @@
         <li><a href="<%=request.getContextPath()%>/views/logged_booking.jsp">Bookings</a></li>
         <li class="login-btn"><a href="<%=request.getContextPath()%>/views/index.jsp">Logout</a></li>
         <li class="login-btn"><a href="<%=request.getContextPath()%>/views/change_password.jsp">Change password</a></li>
+        <li class="login-btn"><a href="<%=request.getContextPath()%>/views/action.jsp">Add movie</a></li>
+<%--        <li class="login-btn"><button formaction="<%=request.getContextPath()%>/views/add_movie.jsp">Add movie</button></li>--%>
+        <li><image src="<%=request.getContextPath()%>/assets/image/user_logo.png"></image></li>
     </ul>
 
 
@@ -67,6 +70,8 @@
         <div class="toggle-bar"></div>
     </div>
 </div>
+
+
 
 <div class="hero-section">
     <div class="hero-slide">
@@ -106,15 +111,15 @@
                         </div>
                         <div class="combo-button top-down delay-6">
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-cart-arrow-down"></i>
                                     <span>Buy Ticket</span>
                                 </a>
                             </div>
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
-                                    <span>Trailer</span>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Details</span>
                                 </a>
                             </div>
                         </div>
@@ -162,15 +167,15 @@
                         </div>
                         <div class="combo-button top-down delay-6">
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-cart-arrow-down"></i>
                                     <span>Buy Ticket</span>
                                 </a>
                             </div>
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
-                                    <span>Trailer</span>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Details</span>
                                 </a>
                             </div>
                         </div>
@@ -181,8 +186,7 @@
 
             <!-- start slide item -->
             <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>/assets/img/hero/hero3.jpg
-                    " alt="">
+                <img src="<%=request.getContextPath()%>/assets/img/hero/hero3.jpg" alt="">
                 <div class="overplay"></div>
                 <div class="hero-slide-item-content">
                     <div class="item-content-wrapper">
@@ -219,15 +223,15 @@
                         </div>
                         <div class="combo-button top-down delay-6">
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-cart-arrow-down"></i>
                                     <span>Buy Ticket</span>
                                 </a>
                             </div>
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
-                                    <span>Trailer</span>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Details</span>
                                 </a>
                             </div>
                         </div>
@@ -275,15 +279,15 @@
                         </div>
                         <div class="combo-button top-down delay-6">
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-cart-arrow-down"></i>
                                     <span>Buy Ticket</span>
                                 </a>
                             </div>
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
-                                    <span>Trailer</span>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Details</span>
                                 </a>
                             </div>
                         </div>
@@ -294,8 +298,7 @@
 
             <!-- start slide item -->
             <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>/assets/img/hero/hero5.jpg
-                    " alt="">
+                <img src="<%=request.getContextPath()%>/assets/img/hero/hero5.jpg" alt="">
                 <div class="overplay"></div>
                 <div class="hero-slide-item-content">
                     <div class="item-content-wrapper">
@@ -332,15 +335,15 @@
                         </div>
                         <div class="combo-button top-down delay-6">
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-cart-arrow-down"></i>
                                     <span>Buy Ticket</span>
                                 </a>
                             </div>
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
-                                    <span>Trailer</span>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Details</span>
                                 </a>
                             </div>
                         </div>
@@ -351,8 +354,7 @@
 
             <!-- start slide item -->
             <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>/assets/img/hero/hero6.jpg
-                    " alt="">
+                <img src="<%=request.getContextPath()%>/assets/img/hero/hero6.jpg" alt="">
                 <div class="overplay"></div>
                 <div class="hero-slide-item-content">
                     <div class="item-content-wrapper">
@@ -389,15 +391,15 @@
                         </div>
                         <div class="combo-button top-down delay-6">
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-cart-arrow-down"></i>
                                     <span>Buy Ticket</span>
                                 </a>
                             </div>
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
-                                    <span>Trailer</span>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Details</span>
                                 </a>
                             </div>
                         </div>
@@ -445,15 +447,15 @@
                         </div>
                         <div class="combo-button top-down delay-6">
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-cart-arrow-down"></i>
                                     <span>Buy Ticket</span>
                                 </a>
                             </div>
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
-                                    <span>Trailer</span>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Details</span>
                                 </a>
                             </div>
                         </div>
@@ -501,15 +503,15 @@
                         </div>
                         <div class="combo-button top-down delay-6">
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-cart-arrow-down"></i>
                                     <span>Buy Ticket</span>
                                 </a>
                             </div>
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
-                                    <span>Trailer</span>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Details</span>
                                 </a>
                             </div>
                         </div>
@@ -520,8 +522,7 @@
 
             <!-- start slide item -->
             <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>/assets/img/hero/hero9.jpg
-                                    " alt="">
+                <img src="<%=request.getContextPath()%>/assets/img/hero/hero9.jpg" alt="">
                 <div class="overplay"></div>
                 <div class="hero-slide-item-content">
                     <div class="item-content-wrapper">
@@ -558,15 +559,15 @@
                         </div>
                         <div class="combo-button top-down delay-6">
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-cart-arrow-down"></i>
                                     <span>Buy Ticket</span>
                                 </a>
                             </div>
                             <div class="item-action">
-                                <a href="#" class="btn btn-hover">
-                                    <i class='bx bxs-right-arrow'></i>
-                                    <span>Trailer</span>
+                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Details</span>
                                 </a>
                             </div>
                         </div>
@@ -584,17 +585,17 @@
     <div class="movies-section-title"></div>
 
     <!-- Content -->
-    <div class="container">
+    <div class="movies-section-container">
         <!-- Movies list -->
-        <div class="owl-carousel carousel-nav-center" , id="detail-movies-slide">
+        <div class="owl-carousel carousel-nav-center" id="detail-movies-slide">
             <!-- movie-item -->
             <div class="movie-item">
-                <img src="<%=request.getContextPath()%>/assets/img/movie1.jpg" alt="">
-                <div class="movie-item-content">
+                <img src="<%=request.getContextPath()%>/assets/img/movie-section/movie1.jpg" alt="">
+                <div class="movie-item-content top-down">
                     <div class="movie-item-title">
-                        Trang Quynh
+                        Phim 1
                     </div>
-                    <div class="movie-infos">
+                    <div class="movie-infos top-down delay-2">
                         <div class="movie-info">
                             <i class="bx bxs-star"></i>
                             <span>9.5</span>
@@ -609,39 +610,32 @@
                         <div class="movie-info">
                             <span>16+</span>
                         </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action" , id="1">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Book</span>
-                                </a>
-                            </div>
-                            <div class="item-action" , id="2">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Trailer</span>
-                                </a>
-                            </div>
-                            <div class="item-action" , id="3">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Details</span>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="combo-button top-down delay-4">
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <span>Buy Ticket</span>
+                            </a>
+                        </div>
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span>Details</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- movie-item -->
 
             <!-- movie-item -->
             <div class="movie-item">
-                <img src="<%=request.getContextPath()%>/assets/img/movie2.jpg" alt="">
-                <div class="movie-item-content">
+                <img src="<%=request.getContextPath()%>/assets/img/movie-section/movie2.jpg" alt="">
+                <div class="movie-item-content top-down">
                     <div class="movie-item-title">
-                        phim 2
+                        Phim 2
                     </div>
-                    <div class="movie-infos">
+                    <div class="movie-infos top-down delay-2">
                         <div class="movie-info">
                             <i class="bx bxs-star"></i>
                             <span>9.5</span>
@@ -656,39 +650,32 @@
                         <div class="movie-info">
                             <span>16+</span>
                         </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action" , id="1">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Book</span>
-                                </a>
-                            </div>
-                            <div class="item-action" , id="2">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Trailer</span>
-                                </a>
-                            </div>
-                            <div class="item-action" , id="3">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Details</span>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="combo-button top-down delay-4">
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <span>Buy Ticket</span>
+                            </a>
+                        </div>
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span>Details</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- movie-item -->
 
             <!-- movie-item -->
             <div class="movie-item">
-                <img src="<%=request.getContextPath()%>/assets/img/movie3.jpg" alt="">
-                <div class="movie-item-content">
+                <img src="<%=request.getContextPath()%>/assets/img/movie-section/movie3.jpg" alt="">
+                <div class="movie-item-content top-down">
                     <div class="movie-item-title">
                         Phim 3
                     </div>
-                    <div class="movie-infos">
+                    <div class="movie-infos top-down delay-2">
                         <div class="movie-info">
                             <i class="bx bxs-star"></i>
                             <span>9.5</span>
@@ -703,39 +690,32 @@
                         <div class="movie-info">
                             <span>16+</span>
                         </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action" , id="1">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Book</span>
-                                </a>
-                            </div>
-                            <div class="item-action" , id="2">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Trailer</span>
-                                </a>
-                            </div>
-                            <div class="item-action" , id="3">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Details</span>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="combo-button top-down delay-4">
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <span>Buy Ticket</span>
+                            </a>
+                        </div>
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span>Details</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- movie-item -->
 
             <!-- movie-item -->
             <div class="movie-item">
-                <img src="<%=request.getContextPath()%>/assets/img/movie4.jpg" alt="">
-                <div class="movie-item-content">
+                <img src="<%=request.getContextPath()%>/assets/img/movie-section/movie4.jpg" alt="">
+                <div class="movie-item-content top-down">
                     <div class="movie-item-title">
                         Phim 4
                     </div>
-                    <div class="movie-infos">
+                    <div class="movie-infos top-down delay-2">
                         <div class="movie-info">
                             <i class="bx bxs-star"></i>
                             <span>9.5</span>
@@ -750,39 +730,32 @@
                         <div class="movie-info">
                             <span>16+</span>
                         </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action" , id="1">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Book</span>
-                                </a>
-                            </div>
-                            <div class="item-action" , id="2">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Trailer</span>
-                                </a>
-                            </div>
-                            <div class="item-action" , id="3">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Details</span>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="combo-button top-down delay-4">
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <span>Buy Ticket</span>
+                            </a>
+                        </div>
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span>Details</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- movie-item -->
 
             <!-- movie-item -->
             <div class="movie-item">
-                <img src="<%=request.getContextPath()%>/assets/img/movie5.jpg" alt="">
-                <div class="movie-item-content">
+                <img src="<%=request.getContextPath()%>/assets/img/movie-section/movie5.jpg" alt="">
+                <div class="movie-item-content top-down">
                     <div class="movie-item-title">
-                        Phim 4
+                        Phim 5
                     </div>
-                    <div class="movie-infos">
+                    <div class="movie-infos top-down delay-2">
                         <div class="movie-info">
                             <i class="bx bxs-star"></i>
                             <span>9.5</span>
@@ -797,32 +770,228 @@
                         <div class="movie-info">
                             <span>16+</span>
                         </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action" , id="1">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Book</span>
-                                </a>
-                            </div>
-                            <div class="item-action" , id="2">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Trailer</span>
-                                </a>
-                            </div>
-                            <div class="item-action" , id="3">
-                                <a href="#" class="btn btn-hover">
-                                    <i class="bx bxs-right-arrow"></i>
-                                    <span>Details</span>
-                                </a>
-                            </div>
+                    </div>
+                    <div class="combo-button top-down delay-4">
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <span>Buy Ticket</span>
+                            </a>
+                        </div>
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span>Details</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- movie-item -->
+            <div class="movie-item">
+                <img src="<%=request.getContextPath()%>/assets/img/movie-section/movie6.jpg" alt="">
+                <div class="movie-item-content top-down">
+                    <div class="movie-item-title">
+                        Phim 6
+                    </div>
+                    <div class="movie-infos top-down delay-2">
+                        <div class="movie-info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <div class="movie-info">
+                            <i class="bx bxs-time"></i>
+                            <span>120 mins</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>HD</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>16+</span>
+                        </div>
+                    </div>
+                    <div class="combo-button top-down delay-4">
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <span>Buy Ticket</span>
+                            </a>
+                        </div>
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span>Details</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- movie-item -->
+            <div class="movie-item">
+                <img src="<%=request.getContextPath()%>/assets/img/movie-section/movie7.jpg" alt="">
+                <div class="movie-item-content top-down">
+                    <div class="movie-item-title">
+                        Phim 7
+                    </div>
+                    <div class="movie-infos top-down delay-2">
+                        <div class="movie-info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <div class="movie-info">
+                            <i class="bx bxs-time"></i>
+                            <span>120 mins</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>HD</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>16+</span>
+                        </div>
+                    </div>
+                    <div class="combo-button top-down delay-4">
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <span>Buy Ticket</span>
+                            </a>
+                        </div>
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span>Details</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- movie-item -->
+            <div class="movie-item">
+                <img src="<%=request.getContextPath()%>/assets/img/movie-section/movie8.jpg" alt="">
+                <div class="movie-item-content top-down">
+                    <div class="movie-item-title">
+                        Phim 8
+                    </div>
+                    <div class="movie-infos top-down delay-2">
+                        <div class="movie-info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <div class="movie-info">
+                            <i class="bx bxs-time"></i>
+                            <span>120 mins</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>HD</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>16+</span>
+                        </div>
+                    </div>
+                    <div class="combo-button top-down delay-4">
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <span>Buy Ticket</span>
+                            </a>
+                        </div>
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span>Details</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- movie-item -->
+            <div class="movie-item">
+                <img src="<%=request.getContextPath()%>/assets/img/movie-section/movie9.jpg" alt="">
+                <div class="movie-item-content top-down">
+                    <div class="movie-item-title">
+                        Phim 9
+                    </div>
+                    <div class="movie-infos top-down delay-2">
+                        <div class="movie-info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <div class="movie-info">
+                            <i class="bx bxs-time"></i>
+                            <span>120 mins</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>HD</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>16+</span>
+                        </div>
+                    </div>
+                    <div class="combo-button top-down delay-4">
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <span>Buy Ticket</span>
+                            </a>
+                        </div>
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span>Details</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- movie-item -->
+            <div class="movie-item">
+                <img src="<%=request.getContextPath()%>/assets/img/movie-section/movie10.jpg" alt="">
+                <div class="movie-item-content top-down">
+                    <div class="movie-item-title">
+                        Phim 10
+                    </div>
+                    <div class="movie-infos top-down delay-2">
+                        <div class="movie-info">
+                            <i class="bx bxs-star"></i>
+                            <span>9.5</span>
+                        </div>
+                        <div class="movie-info">
+                            <i class="bx bxs-time"></i>
+                            <span>120 mins</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>HD</span>
+                        </div>
+                        <div class="movie-info">
+                            <span>16+</span>
+                        </div>
+                    </div>
+                    <div class="combo-button top-down delay-4">
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <span>Buy Ticket</span>
+                            </a>
+                        </div>
+                        <div class="item-action">
+                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span>Details</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End last movie-item -->
         </div>
+        <!-- End Movie List -->
     </div>
+    <!-- End Content -->
 </div>
 
 <!-- Footer -->

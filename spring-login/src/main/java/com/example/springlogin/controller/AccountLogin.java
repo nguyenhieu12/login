@@ -25,12 +25,11 @@ public class AccountLogin {
 
     @PostMapping("/login")
     public String login(HttpServletRequest request) throws SQLException {
-        System.out.println(CheckLogged.LOGGED_USERNAME);
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
         if(username.isEmpty() || password.isEmpty())
-            return "loginfailed";
+            return "login";
 
         ResultSet resultSet = DatabaseConnection.connect("select * from account");
 
@@ -49,7 +48,7 @@ public class AccountLogin {
             e.printStackTrace();
         }
 
-        return "loginfailed";
+        return "login";
     }
 
     @PostMapping("/logout")
@@ -77,7 +76,7 @@ public class AccountLogin {
             while (resultSet.next()) {
                 if(resultSet.getString("username").equals(CheckLogged.LOGGED_USERNAME)) {
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testlogin1",
+                    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mtbs",
                             "root", "hieu6969" );
                     String sql = "UPDATE account SET password = ? WHERE username = ?";
                     PreparedStatement pstmt = connection.prepareStatement(sql);
@@ -160,7 +159,7 @@ public class AccountLogin {
             while (resultSet.next()) {
                 if(resultSet.getString("username").equals(CheckLogged.RESET_PASSWORD_USERNAME)) {
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testlogin1",
+                    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mtbs",
                             "root", "hieu6969" );
                     String sql = "UPDATE account SET password = ? WHERE username = ?";
                     PreparedStatement pstmt = connection.prepareStatement(sql);

@@ -43,7 +43,6 @@
         <li><a href="<%=request.getContextPath()%>/views/index.jsp">Home</a></li>
         <li><a href="<%=request.getContextPath()%>/views/index.jsp#movies">Movies</a></li>
         <li><a href="<%=request.getContextPath()%>/views/booking.jsp">Bookings</a></li>
-        <!-- <li class="login-btn js-login-btn"><a>Login</a></li> -->
         <li class="login-btn js-login-btn"><a href="<%=request.getContextPath()%>/views/login.jsp">Login</a></li>
     </ul>
 

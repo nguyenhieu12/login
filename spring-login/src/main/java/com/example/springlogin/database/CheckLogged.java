@@ -21,4 +21,5 @@ public class CheckLogged {
     public static void setResetPasswordUsername(String resetPasswordUsername) {
         RESET_PASSWORD_USERNAME = resetPasswordUsername;
     }
+    
 }

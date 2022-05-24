@@ -66,16 +66,72 @@
 
 <!-- Modal Login/Register-->
 <div class="login-register" id="login-register">
-    <!-- Login -->
-    <div class="modal open js-modal login js-login">
+    <!-- Register -->
+    <div class="modal open js-modal register js-register">
         <div class="modal__container js-modal__container">
             <!-- icon -->
+            <div class="modal__close-btn js-modal__close-btn">
+                <a href="<%=request.getContextPath()%>/views/logged_index.jsp"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+
             <!-- Title -->
-            <h1 class="heading">Change password successful !</h1>
+            <h1 class="heading">Add movie</h1>
 
             <!-- Content -->
             <div class="content">
-                <a class="register-btn js-register-btn" href="<%=request.getContextPath()%>/views/logged_index.jsp">Go to login</a>
+                <form action="/add_movie" method="post">
+                    <div class="user-details">
+                        <div class="user-details">
+                            <div class="input-box">
+                                <label for="" class="info">Movie name</label>
+                                <input type="text" placeholder="Enter movie name" name="movie_name" required>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="" class="info">Poster url</label>
+                                <input type="password" placeholder="Enter movie poster url" name="movie_poster_url" required>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="" class="info">Trailer url</label>
+                                <input type="password" placeholder="Enter movie trailer url" name="movie_trailer_url" required>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="" class="info">Duration</label>
+                                <input type="text" placeholder="Enter duration" name="movie_duration" required>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="" class="info">Genre</label>
+                                <input type="text" placeholder="Enter genre" name="movie_genre" required>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="" class="info">Director</label>
+                                <input type="text" placeholder="Enter director" name="director" required>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="" class="info">Producer</label>
+                                <input type="text" placeholder="Enter producer" name="producer" required>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="" class="info">Cast</label>
+                                <input type="text" placeholder="Enter cast" name="cast" required>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="" class="info">Description</label>
+                                <input type="text" placeholder="Enter description" name="description" required>
+                            </div>
+                        </div>
+
+                        <div class="submit-btn">
+                            <input type="submit" value="Submit">
+                        </div>
+                </form>
             </div>
         </div>
     </div>
