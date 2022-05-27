@@ -41,7 +41,7 @@ public class AllConfig {
             }
 
             @Override
-            public Movie getMovieByName(String movie_name) {
+            public Iterable<Movie> getMovieById(Long movie_id) {
                 return null;
             }
 

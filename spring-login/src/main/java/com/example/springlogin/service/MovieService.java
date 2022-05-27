@@ -7,7 +7,7 @@ import java.util.List;
 public interface MovieService {
     List<Movie> getAllMovies(Movie movie);
 
-    Movie getMovieByName(String movie_name);
+    Iterable<Movie> getMovieById(Long movie_id);
 
     void addMovie(Movie movie);
 

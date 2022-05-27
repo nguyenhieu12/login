@@ -1,6 +1,5 @@
 package com.example.springlogin.controller;
 
-
 import com.example.springlogin.database.DatabaseConnection;
 import com.example.springlogin.model.Account;
 import com.example.springlogin.model.User;
@@ -65,7 +64,7 @@ public class AccountRegister {
         return "createsuccess";
     }
 
-    @PostMapping("goToHome")
+    @PostMapping("/goToHome")
     public String goToHome() {
         return "index";
     }

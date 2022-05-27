@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -26,8 +27,9 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public Movie getMovieByName(String movie_name) {
-        return null;
+    public Iterable<Movie> getMovieById(Long movie_id) {
+        return Collections.singleton(movieRepository.findById(movie_id).orElseThrow(
+                () -> new RuntimeException("Cannot find by id: " + movie_id)));
     }
 
     @Override
@@ -38,5 +40,9 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public void deleteUserByName(String movie_name) {
 
+    }
+
+    public MovieRepository getMovieRepository() {
+        return movieRepository;
     }
 }

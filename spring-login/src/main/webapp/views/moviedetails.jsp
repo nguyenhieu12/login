@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
+<%@ page import="com.example.springlogin.database.CheckLogged" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,11 +41,14 @@
   </a>
 
   <ul class="navigation">
-    <li><a href="<%=request.getContextPath()%>/views/index.jsp">Home</a></li>
+    <li><a href="<%=request.getContextPath()%>/views/logged_index.jsp">Home</a></li>
     <li><a href="#movies">Movies</a></li>
     <li><a href="<%=request.getContextPath()%>/views/booking.jsp">Bookings</a></li>
-    <!-- <li class="login-btn js-login-btn"><a>Login</a></li> -->
-    <li class="login-btn"><a href="<%=request.getContextPath()%>/views/login.jsp">Login</a></li>
+    <li class="login-btn"><a href="<%=request.getContextPath()%>/views/index.jsp">Logout</a></li>
+    <li class="login-btn"><a href="<%=request.getContextPath()%>/views/change_password.jsp">Change password</a></li>
+    <li class="login-btn"><a  href="<%=request.getContextPath()%>/views/action.jsp">Add movie</a></li>
+    <li style="color: fuchsia"><h1>${CheckLogged.LOGGED_USERNAME}</h1></li>
+    <li><image src="<%=request.getContextPath()%>/assets/img/user_logo.png"></image></li>
   </ul>
 
 
@@ -61,30 +67,34 @@
   </div>
 </div>
 
+<c:forEach var="cur_movie" items="${movies}">
 <div class="movie-details-section">
   <div class="movie-details-container grid wide">
     <h2 class=" page-title">Nội dung phim</h2>
 
       <div class="row movie-details-content">
-        <div class="movie-image col l-2 m-3 c-11">
-          <img src="<%=request.getContextPath()%>/assets/img/movie-details/dr-strange-payoff-poster_1_.jpg" alt="">
-        </div>
+<%--        <div class="movie-image col l-2 m-3 c-11">--%>
+<%--          <img src="<%=request.getContextPath()%>/assets/img/movie-details/dr-strange-payoff-poster_1_.jpg" alt="">--%>
+<%--        </div>--%>
 
         <div class="movie-details-property col l-o-1 l-9 m-9 c-11">
-          <h2 class="movie-details-title">PHÙ THỦY TỐI THƯỢNG TRONG ĐA VŨ TRỤ HỖN LOẠN</h2>
+          <h2 class="movie-details-title">${cur_movie.movie_name}</h2>
 
           <ul class="movie-details-infos">
             <li class="movie-details-info">
-              <label>Đạo diễn:</label><span>Sam Raimi</span>
+              <label>Đạo diễn:</label><span>${cur_movie.director}</span>
             </li>
 
             <li class="movie-details-info">
-              <label>Diễn viên:</label><span>Benedict Cumberbatch, Elizabeth Olsen Rachel
-                                McAdams</span>
+              <label>Diễn viên:</label><span>${cur_movie.cast}</span>
             </li>
 
             <li class="movie-details-info">
-              <label>Thể loại:</label><span>Hành Động, Phiêu Lưu, Thần thoại</span>
+              <label>Nhà sản xuất:</label><span>${cur_movie.producer}</span>
+            </li>
+
+            <li class="movie-details-info">
+              <label>Thể loại:</label><span>${cur_movie.movie_genre}</span>
             </li>
 
             <li class="movie-details-info">
@@ -92,7 +102,7 @@
             </li>
 
             <li class="movie-details-info">
-              <label>Thời lượng:</label><span>126 phút</span>
+              <label>Thời lượng:</label><span>${cur_movie.movie_duration}</span>
             </li>
 
             <li class="movie-details-info">
@@ -125,13 +135,14 @@
       </div>
 
       <div class="movie-details-des">
-        <div class="text-des active js-text-des">Sau các sự kiện của Avengers: Endgame, Tiến sĩ Stephen Strange tiếp tục nghiên cứu về Viên đá Thời gian. Nhưng một người bạn cũ đã trở thành kẻ thù tìm cách tiêu diệt mọi phù thủy trên Trái đất, làm xáo trộn kế hoạch của Strange và cũng khiến anh ta mở ra một tội ác khôn lường.</div>
+        <div class="text-des active js-text-des">${cur_movie.description}</div>
         <div class="trailer-des js-trailer-des">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/NE2z4y2Imnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="${cur_movie.movie_trailer_url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
   </div>
 </div>
+</c:forEach>
 
 <!-- Footer -->
 <footer id="footer" class="footer grid">
