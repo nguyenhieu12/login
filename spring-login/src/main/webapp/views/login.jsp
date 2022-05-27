@@ -82,7 +82,7 @@
                     <div class="user-details">
                         <div class="input-box">
                             <label for="" class="info">User name</label>
-                            <input type="text" placeholder="Enter your username" name="username" required>
+                            <input type="text" placeholder="Enter your username" name="username" required >
                         </div>
 
                         <div class="input-box">
@@ -106,7 +106,6 @@
 <!-- Main script -->
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/main.js"></script>
 <!-- APP SCRIPT -->
-<%--<script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/app.js"></script>--%>
 </body>
 
 </html>

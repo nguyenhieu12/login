@@ -63,7 +63,7 @@
 
 <div class="movie-details-section">
   <div class="movie-details-container grid wide">
-    <h1 class=" page-title">Nội dung phim</h2>
+    <h2 class=" page-title">Nội dung phim</h2>
 
       <div class="row movie-details-content">
         <div class="movie-image col l-2 m-3 c-11">

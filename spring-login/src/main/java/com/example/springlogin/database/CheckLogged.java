@@ -22,4 +22,19 @@ public class CheckLogged {
         RESET_PASSWORD_USERNAME = resetPasswordUsername;
     }
 
+    public static boolean isLoggedStatus() {
+        return LOGGED_STATUS;
+    }
+
+    public static String getLoggedUsername() {
+        return LOGGED_USERNAME;
+    }
+
+    public static String getConfirmCode() {
+        return CONFIRM_CODE;
+    }
+
+    public static String getResetPasswordUsername() {
+        return RESET_PASSWORD_USERNAME;
+    }
 }

@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,510 +70,70 @@
     </div>
 </div>
 
+<sql:setDataSource var = "snapshot" url = "jdbc:mysql://localhost:3306/mtbs"
+                   user = "root"  password = "hieu6969"/>
+
+<sql:query dataSource="${snapshot}" var="movies">
+    SELECT * FROM movie;
+</sql:query>
+
 <div class="hero-section">
     <div class="hero-slide">
         <div class="owl-carousel carousel-nav-center" id="hero-carousel">
             <!-- start slide item -->
-            <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>/assets/img/hero/hero1.jpg" alt="">
-                <div class="overplay"></div>
-                <div class="hero-slide-item-content">
-                    <div class="item-content-wrapper">
-                        <div class="item-content-title top-down">
-                            Maleficent
-                        </div>
-                        <div class="movie-infos top-down delay-2">
-                            <!-- danh gia -->
-                            <div class="movie-info">
-                                <i class="bx bxs-star"></i>
-                                <span>9.5</span>
+            <c:forEach var="row" items="${movies.rows}">
+                <div class="hero-slide-item">
+                    <img src="${row.movie_poster_url}" alt="">
+                    <div class="overplay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wrapper">
+                            <div class="item-content-title top-down">
+                                ${row.movie_name}
                             </div>
-                            <!-- thoi gian -->
-                            <div class="movie-info">
-                                <i class="bx bxs-time"></i>
-                                <span>130mins</span>
-                            </div>
-                            <!-- the loai HD, 2D 3D -->
-                            <div class="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <!--gioi han do tuoi xem  -->
-                            <div class="movie-info">
-                                <span>16+</span>
-                            </div>
+                            <div class="movie-infos top-down delay-2">
+                                <!-- danh gia -->
+                                <div class="movie-info">
+                                    <i class="bx bxs-star">
+                                        <span>9.5</span>
+                                    </i>
+                                </div>
+                                <!-- thoi gian -->
+                                <div class="movie-info">
+                                    <i class="bx bxs-time">
+                                        <span>${row.movie_duration}</span>
+                                    </i>
+                                </div>
+                                <!-- the loai HD, 2D 3D -->
+                                <div class="movie-info">
+                                    <span>HD</span>
+                                </div>
+                                <!--gioi han do tuoi xem  -->
+                                <div class="movie-info">
+                                    <span>16+</span>
+                                </div>
 
-                        </div>
-                        <div class="item-content-description top-down delay-4">
-                            Đây là bộ phim hiếm hoi của Walt Disney có khắc họa một nhân vật phản diện điển hình trong một bộ phim nổi tiếng,
-                            mụ phù thủy Maleficent trong tác phẩm hoạt hình kinh điển“Sleeping Beauty”.Bộ phim sẽ lần đầu tiết lộ sự thật đằng
-                            sau số phận bi kịch của người phụ nữ vốn có trái tim thuần khiết này cũng như chân tướng của sự phản bội đã khiến trái
-                            tim của bà hóa đá.
-                        </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-cart-arrow-down"></i>
-                                    <span>Buy Ticket</span>
-                                </a>
                             </div>
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <span>Details</span>
-                                </a>
+                            <div class="item-content-description top-down delay-4">
+                                ${row.description}
+                            </div>
+                            <div class="combo-button top-down delay-6">
+                                <div class="item-action">
+                                    <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                        <i class="fa-solid fa-cart-arrow-down"></i>
+                                        <span>Buy Ticket</span>
+                                    </a>
+                                </div>
+                                <div class="item-action">
+                                    <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                        <span>Details</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- end slide item -->
-
-            <!-- start slide item -->
-            <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>/assets/img/hero/hero2.jpg" alt="">
-                <div class="overplay"></div>
-                <div class="hero-slide-item-content">
-                    <div class="item-content-wrapper">
-                        <div class="item-content-title top-down">
-                            Movie 2
-                        </div>
-                        <div class="movie-infos top-down delay-2">
-                            <!-- danh gia -->
-                            <div class="movie-info">
-                                <i class="bx bxs-star">
-                                    <span>9.5</span>
-                                </i>
-                            </div>
-                            <!-- thoi gian -->
-                            <div class="movie-info">
-                                <i class="bx bxs-time">
-                                    <span>120mins</span>
-                                </i>
-                            </div>
-                            <!-- the loai HD, 2D 3D -->
-                            <div class="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <!--gioi han do tuoi xem  -->
-                            <div class="movie-info">
-                                <span>16+</span>
-                            </div>
-
-                        </div>
-                        <div class="item-content-description top-down delay-4">
-                            Nội dung bộ phim Trạng Quỳnh được phóng tác từ những giai thoại về nhân vật cùng tên
-                            trong dân gian Việt Nam. Chuyện phim xoay quanh Quỳnh (Quốc Anh) - một anh chàng thông
-                            minh, ma mãnh, rất thích bày trò trêu chọc người dân trong làng.
-                        </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-cart-arrow-down"></i>
-                                    <span>Buy Ticket</span>
-                                </a>
-                            </div>
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <span>Details</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end slide item -->
-
-            <!-- start slide item -->
-            <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>/assets/img/hero/hero3.jpg" alt="">
-                <div class="overplay"></div>
-                <div class="hero-slide-item-content">
-                    <div class="item-content-wrapper">
-                        <div class="item-content-title top-down">
-                            Movie 3
-                        </div>
-                        <div class="movie-infos top-down delay-2">
-                            <!-- danh gia -->
-                            <div class="movie-info">
-                                <i class="bx bxs-star">
-                                    <span>9.5</span>
-                                </i>
-                            </div>
-                            <!-- thoi gian -->
-                            <div class="movie-info">
-                                <i class="bx bxs-time">
-                                    <span>120mins</span>
-                                </i>
-                            </div>
-                            <!-- the loai HD, 2D 3D -->
-                            <div class="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <!--gioi han do tuoi xem  -->
-                            <div class="movie-info">
-                                <span>16+</span>
-                            </div>
-
-                        </div>
-                        <div class="item-content-description top-down delay-4">
-                            Nội dung bộ phim Trạng Quỳnh được phóng tác từ những giai thoại về nhân vật cùng tên
-                            trong dân gian Việt Nam. Chuyện phim xoay quanh Quỳnh (Quốc Anh) - một anh chàng thông
-                            minh, ma mãnh, rất thích bày trò trêu chọc người dân trong làng.
-                        </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-cart-arrow-down"></i>
-                                    <span>Buy Ticket</span>
-                                </a>
-                            </div>
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <span>Details</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end slide item -->
-
-            <!-- start slide item -->
-            <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>/assets/img/hero/hero4.jpg" alt="">
-                <div class="overplay"></div>
-                <div class="hero-slide-item-content">
-                    <div class="item-content-wrapper">
-                        <div class="item-content-title top-down">
-                            Movie 4
-                        </div>
-                        <div class="movie-infos top-down delay-2">
-                            <!-- danh gia -->
-                            <div class="movie-info">
-                                <i class="bx bxs-star">
-                                    <span>9.5</span>
-                                </i>
-                            </div>
-                            <!-- thoi gian -->
-                            <div class="movie-info">
-                                <i class="bx bxs-time">
-                                    <span>120mins</span>
-                                </i>
-                            </div>
-                            <!-- the loai HD, 2D 3D -->
-                            <div class="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <!--gioi han do tuoi xem  -->
-                            <div class="movie-info">
-                                <span>16+</span>
-                            </div>
-
-                        </div>
-                        <div class="item-content-description top-down delay-4">
-                            Nội dung bộ phim Trạng Quỳnh được phóng tác từ những giai thoại về nhân vật cùng tên
-                            trong dân gian Việt Nam. Chuyện phim xoay quanh Quỳnh (Quốc Anh) - một anh chàng thông
-                            minh, ma mãnh, rất thích bày trò trêu chọc người dân trong làng.
-                        </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-cart-arrow-down"></i>
-                                    <span>Buy Ticket</span>
-                                </a>
-                            </div>
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <span>Details</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end slide item -->
-
-            <!-- start slide item -->
-            <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>/assets/img/hero/hero5.jpg" alt="">
-                <div class="overplay"></div>
-                <div class="hero-slide-item-content">
-                    <div class="item-content-wrapper">
-                        <div class="item-content-title top-down">
-                            Movie 5
-                        </div>
-                        <div class="movie-infos top-down delay-2">
-                            <!-- danh gia -->
-                            <div class="movie-info">
-                                <i class="bx bxs-star">
-                                    <span>9.5</span>
-                                </i>
-                            </div>
-                            <!-- thoi gian -->
-                            <div class="movie-info">
-                                <i class="bx bxs-time">
-                                    <span>120mins</span>
-                                </i>
-                            </div>
-                            <!-- the loai HD, 2D 3D -->
-                            <div class="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <!--gioi han do tuoi xem  -->
-                            <div class="movie-info">
-                                <span>16+</span>
-                            </div>
-
-                        </div>
-                        <div class="item-content-description top-down delay-4">
-                            Nội dung bộ phim Trạng Quỳnh được phóng tác từ những giai thoại về nhân vật cùng tên
-                            trong dân gian Việt Nam. Chuyện phim xoay quanh Quỳnh (Quốc Anh) - một anh chàng thông
-                            minh, ma mãnh, rất thích bày trò trêu chọc người dân trong làng.
-                        </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-cart-arrow-down"></i>
-                                    <span>Buy Ticket</span>
-                                </a>
-                            </div>
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <span>Details</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end slide item -->
-
-            <!-- start slide item -->
-            <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>/assets/img/hero/hero6.jpg" alt="">
-                <div class="overplay"></div>
-                <div class="hero-slide-item-content">
-                    <div class="item-content-wrapper">
-                        <div class="item-content-title top-down">
-                            Movie 6
-                        </div>
-                        <div class="movie-infos top-down delay-2">
-                            <!-- danh gia -->
-                            <div class="movie-info">
-                                <i class="bx bxs-star">
-                                    <span>9.5</span>
-                                </i>
-                            </div>
-                            <!-- thoi gian -->
-                            <div class="movie-info">
-                                <i class="bx bxs-time">
-                                    <span>120mins</span>
-                                </i>
-                            </div>
-                            <!-- the loai HD, 2D 3D -->
-                            <div class="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <!--gioi han do tuoi xem  -->
-                            <div class="movie-info">
-                                <span>16+</span>
-                            </div>
-
-                        </div>
-                        <div class="item-content-description top-down delay-4">
-                            Nội dung bộ phim Trạng Quỳnh được phóng tác từ những giai thoại về nhân vật cùng tên
-                            trong dân gian Việt Nam. Chuyện phim xoay quanh Quỳnh (Quốc Anh) - một anh chàng thông
-                            minh, ma mãnh, rất thích bày trò trêu chọc người dân trong làng.
-                        </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-cart-arrow-down"></i>
-                                    <span>Buy Ticket</span>
-                                </a>
-                            </div>
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <span>Details</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end slide item -->
-
-            <!-- start slide item -->
-            <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>E/assets/img/hero/hero7.png" alt="">
-                <div class="overplay"></div>
-                <div class="hero-slide-item-content">
-                    <div class="item-content-wrapper">
-                        <div class="item-content-title top-down">
-                            Movie 7
-                        </div>
-                        <div class="movie-infos top-down delay-2">
-                            <!-- danh gia -->
-                            <div class="movie-info">
-                                <i class="bx bxs-star">
-                                    <span>9.5</span>
-                                </i>
-                            </div>
-                            <!-- thoi gian -->
-                            <div class="movie-info">
-                                <i class="bx bxs-time">
-                                    <span>120mins</span>
-                                </i>
-                            </div>
-                            <!-- the loai HD, 2D 3D -->
-                            <div class="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <!--gioi han do tuoi xem  -->
-                            <div class="movie-info">
-                                <span>16+</span>
-                            </div>
-
-                        </div>
-                        <div class="item-content-description top-down delay-4">
-                            Nội dung bộ phim Trạng Quỳnh được phóng tác từ những giai thoại về nhân vật cùng tên
-                            trong dân gian Việt Nam. Chuyện phim xoay quanh Quỳnh (Quốc Anh) - một anh chàng thông
-                            minh, ma mãnh, rất thích bày trò trêu chọc người dân trong làng.
-                        </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-cart-arrow-down"></i>
-                                    <span>Buy Ticket</span>
-                                </a>
-                            </div>
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <span>Details</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end slide item -->
-
-            <!-- start slide item -->
-            <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>/assets/img/hero/hero8.jpg" alt="">
-                <div class="overplay"></div>
-                <div class="hero-slide-item-content">
-                    <div class="item-content-wrapper">
-                        <div class="item-content-title top-down">
-                            Movie 8
-                        </div>
-                        <div class="movie-infos top-down delay-2">
-                            <!-- danh gia -->
-                            <div class="movie-info">
-                                <i class="bx bxs-star">
-                                    <span>9.5</span>
-                                </i>
-                            </div>
-                            <!-- thoi gian -->
-                            <div class="movie-info">
-                                <i class="bx bxs-time">
-                                    <span>120mins</span>
-                                </i>
-                            </div>
-                            <!-- the loai HD, 2D 3D -->
-                            <div class="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <!--gioi han do tuoi xem  -->
-                            <div class="movie-info">
-                                <span>16+</span>
-                            </div>
-
-                        </div>
-                        <div class="item-content-description top-down delay-4">
-                            Nội dung bộ phim Trạng Quỳnh được phóng tác từ những giai thoại về nhân vật cùng tên
-                            trong dân gian Việt Nam. Chuyện phim xoay quanh Quỳnh (Quốc Anh) - một anh chàng thông
-                            minh, ma mãnh, rất thích bày trò trêu chọc người dân trong làng.
-                        </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-cart-arrow-down"></i>
-                                    <span>Buy Ticket</span>
-                                </a>
-                            </div>
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <span>Details</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end slide item -->
-
-            <!-- start slide item -->
-            <div class="hero-slide-item">
-                <img src="<%=request.getContextPath()%>/assets/img/hero/hero9.jpg" alt="">
-                <div class="overplay"></div>
-                <div class="hero-slide-item-content">
-                    <div class="item-content-wrapper">
-                        <div class="item-content-title top-down">
-                            Movie 9
-                        </div>
-                        <div class="movie-infos top-down delay-2">
-                            <!-- danh gia -->
-                            <div class="movie-info">
-                                <i class="bx bxs-star">
-                                    <span>9.5</span>
-                                </i>
-                            </div>
-                            <!-- thoi gian -->
-                            <div class="movie-info">
-                                <i class="bx bxs-time">
-                                    <span>120mins</span>
-                                </i>
-                            </div>
-                            <!-- the loai HD, 2D 3D -->
-                            <div class="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <!--gioi han do tuoi xem  -->
-                            <div class="movie-info">
-                                <span>16+</span>
-                            </div>
-
-                        </div>
-                        <div class="item-content-description top-down delay-4">
-                            Nội dung bộ phim Trạng Quỳnh được phóng tác từ những giai thoại về nhân vật cùng tên
-                            trong dân gian Việt Nam. Chuyện phim xoay quanh Quỳnh (Quốc Anh) - một anh chàng thông
-                            minh, ma mãnh, rất thích bày trò trêu chọc người dân trong làng.
-                        </div>
-                        <div class="combo-button top-down delay-6">
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-cart-arrow-down"></i>
-                                    <span>Buy Ticket</span>
-                                </a>
-                            </div>
-                            <div class="item-action">
-                                <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <span>Details</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </c:forEach>
             <!-- end slide item -->
         </div>
     </div>
@@ -1089,6 +651,9 @@
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/main.js"></script>
 <!-- APP SCRIPT -->
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/app.js"></script>
+
+<%--<script type="text/javascript"> window.onload = alertName; </script>--%>
+
 </body>
 
 
