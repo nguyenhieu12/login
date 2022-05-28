@@ -60,10 +60,10 @@
 
 
     <div class="search-box">
-        <input type="search" name="search-text" id="search-text" placeholder="Find your favorite moive">
+        <input type="search" name="search-text" id="search-text" placeholder="Find your favorite moive" formaction="/search">
         <span class="search-btn">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </span>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
     </div>
 
     <!-- default display: none -->
@@ -128,7 +128,7 @@
                                     </a>
                                 </div>
                                 <div class="item-action">
-                                    <a href="movie/moviedetails/${row.movie_id}" class="btn btn-hover">
+                                    <a href="/moviedetails/${row.movie_id}" class="btn btn-hover">
                                         <i class="fa-solid fa-circle-info"></i>
                                         <span>Details</span>
                                     </a>
@@ -177,13 +177,13 @@
                     </div>
                     <div class="combo-button top-down delay-4">
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-cart-arrow-down"></i>
                                 <span>Buy Ticket</span>
                             </a>
                         </div>
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-circle-info"></i>
                                 <span>Details</span>
                             </a>
@@ -217,13 +217,13 @@
                     </div>
                     <div class="combo-button top-down delay-4">
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-cart-arrow-down"></i>
                                 <span>Buy Ticket</span>
                             </a>
                         </div>
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-circle-info"></i>
                                 <span>Details</span>
                             </a>
@@ -257,13 +257,13 @@
                     </div>
                     <div class="combo-button top-down delay-4">
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-cart-arrow-down"></i>
                                 <span>Buy Ticket</span>
                             </a>
                         </div>
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-circle-info"></i>
                                 <span>Details</span>
                             </a>
@@ -297,13 +297,13 @@
                     </div>
                     <div class="combo-button top-down delay-4">
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-cart-arrow-down"></i>
                                 <span>Buy Ticket</span>
                             </a>
                         </div>
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-circle-info"></i>
                                 <span>Details</span>
                             </a>
@@ -337,13 +337,13 @@
                     </div>
                     <div class="combo-button top-down delay-4">
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-cart-arrow-down"></i>
                                 <span>Buy Ticket</span>
                             </a>
                         </div>
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-circle-info"></i>
                                 <span>Details</span>
                             </a>
@@ -377,13 +377,13 @@
                     </div>
                     <div class="combo-button top-down delay-4">
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-cart-arrow-down"></i>
                                 <span>Buy Ticket</span>
                             </a>
                         </div>
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-circle-info"></i>
                                 <span>Details</span>
                             </a>
@@ -417,13 +417,13 @@
                     </div>
                     <div class="combo-button top-down delay-4">
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-cart-arrow-down"></i>
                                 <span>Buy Ticket</span>
                             </a>
                         </div>
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-circle-info"></i>
                                 <span>Details</span>
                             </a>
@@ -457,13 +457,13 @@
                     </div>
                     <div class="combo-button top-down delay-4">
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-cart-arrow-down"></i>
                                 <span>Buy Ticket</span>
                             </a>
                         </div>
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-circle-info"></i>
                                 <span>Details</span>
                             </a>
@@ -497,13 +497,13 @@
                     </div>
                     <div class="combo-button top-down delay-4">
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-cart-arrow-down"></i>
                                 <span>Buy Ticket</span>
                             </a>
                         </div>
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-circle-info"></i>
                                 <span>Details</span>
                             </a>
@@ -537,13 +537,13 @@
                     </div>
                     <div class="combo-button top-down delay-4">
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-cart-arrow-down"></i>
                                 <span>Buy Ticket</span>
                             </a>
                         </div>
                         <div class="item-action">
-                            <a href="<%=request.getContextPath()%>/views/login.jsp" class="btn btn-hover">
+                            <a href="<%=request.getContextPath()%>/views/logged_index.jsp" class="btn btn-hover">
                                 <i class="fa-solid fa-circle-info"></i>
                                 <span>Details</span>
                             </a>

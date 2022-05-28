@@ -1,5 +1,7 @@
-<%@ page import="com.example.springlogin.database.CheckLogged" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
+<%@ page import="com.example.springlogin.database.CheckLogged" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +46,7 @@
         <li><a href="<%=request.getContextPath()%>/views/booking.jsp">Bookings</a></li>
         <li class="login-btn"><a href="<%=request.getContextPath()%>/views/index.jsp">Logout</a></li>
         <li class="login-btn"><a href="<%=request.getContextPath()%>/views/change_password.jsp">Change password</a></li>
-        <li class="login-btn"><a href="<%=request.getContextPath()%>/views/add_movie.jsp">Add movie</a></li>
+        <li class="login-btn"><a  href="<%=request.getContextPath()%>/views/action.jsp">Add movie</a></li>
         <li style="color: fuchsia"><h1>${CheckLogged.LOGGED_USERNAME}</h1></li>
         <li><image src="<%=request.getContextPath()%>/assets/img/user_logo.png"></image></li>
     </ul>
@@ -65,59 +67,82 @@
     </div>
 </div>
 
-<%--<%--%>
-<%--    CheckLogged.TOTAL_PRICE = "<script>" updateSelectedCount() "</script>";--%>
-<%--%>--%>
+<c:forEach var="cur_movie" items="${searched_movie}">
+    <div class="movie-details-section">
+        <div class="movie-details-container grid wide">
+            <h2 class=" page-title">Chi tiết phim</h2>
 
-<%--<c></c>--%>
+            <div class="row movie-details-content">
+                    <%--        <div class="movie-image col l-2 m-3 c-11">--%>
+                    <%--          <img src="<%=request.getContextPath()%>/assets/img/movie-details/dr-strange-payoff-poster_1_.jpg" alt="">--%>
+                    <%--        </div>--%>
 
-<div class="payment-section">
-    <div class="payment-section-wrapper grid wide">
-        <div class="payment-section-container row">
-            <!-- col1 :Infos -->
-            <div class="col l-6 m-5 c-12 payment-content">
-                <div class="payment-movie-infos">
-                    <h3 class="payment-movie-name">PHÙ THỦY TỐI THƯỢNG TRONG ĐA VŨ TRỤ HỖN LOẠN</h3>
-                    <p class="payment-movie-date">Saturday, 28 May, 2022</p>
-                    <p class="payment-movie-time">20:00</p>
-                </div>
-                <div class="payment-cinema-infos">
-                    <label class="cinema-name">Rạp CGV</label>
-                    <p class="cinema-details">CGV Vincom Sky Lake Phạm Hùng</p>
-                </div>
+                <div class="movie-details-property col l-o-1 l-9 m-9 c-11">
+                    <h2 class="movie-details-title">${cur_movie.movie_name}</h2>
 
-                <div class="payment-movie-room">
-                    <div class="payment-room-info">
-                        <label>Ghế</label><span>D12, D13, D14, D15</span>
+                    <ul class="movie-details-infos">
+                        <li class="movie-details-info">
+                            <label>Đạo diễn:</label><span>${cur_movie.director}</span>
+                        </li>
+
+                        <li class="movie-details-info">
+                            <label>Diễn viên:</label><span>${cur_movie.cast}</span>
+                        </li>
+
+                        <li class="movie-details-info">
+                            <label>Nhà sản xuất:</label><span>${cur_movie.producer}</span>
+                        </li>
+
+                        <li class="movie-details-info">
+                            <label>Thể loại:</label><span>${cur_movie.movie_genre}</span>
+                        </li>
+
+                        <li class="movie-details-info">
+                            <label>Khởi chiếu:</label><span>04/05/2022</span>
+                        </li>
+
+                        <li class="movie-details-info">
+                            <label>Thời lượng:</label><span>${cur_movie.movie_duration}</span>
+                        </li>
+
+                        <li class="movie-details-info">
+                            <label>Ngôn ngữ:</label><span>Tiếng Anh - Phụ đề Tiếng Việt</span>
+                        </li>
+
+                        <li class="movie-details-info">
+                            <label>Rated: </label><span>C13 - PHIM CẤM KHÁN GIẢ DƯỚI 13 TUỔI</span>
+                        </li>
+                    </ul>
+
+                    <div class="movie-details-options">
+                        <a href="<%=request.getContextPath()%>/views/booking.jsp" class="buy-ticket">
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <span>Buy Ticket</span>
+                        </a>
+
+                        <ul>
+                            <li class="option-item option-item1 js-option-item1 active">
+                                <i class="fa fa-light fa-hand-point-right"></i>
+                                <span>Nội dung</span>
+                            </li>
+                            <li class="option-item option-item2 js-option-item2">
+                                <i class="fa fa-light fa-hand-point-right"></i>
+                                <span>Trailer</span>
+                            </li>
+                        </ul>
                     </div>
-
-                    <div class="payment-room-info">
-                        <label>Phòng chiếu</label><span>Cinema 2</span>
-                    </div>
-                </div>
-
-                <div class="payment-price">
-                    <label>Số tiền</label>
-                    <i class="fa-solid fa-money-bill"></i>
-                    <span>480.000</span>
                 </div>
             </div>
 
-            <!-- col2 :QR -->
-            <div class="col l-o-0 l-6 m-o-2 m-5 c-12 payment-action">
-                <h2>Quét mã để thành toán</h2>
-
-                <div class="qr-code">
-                    <img src="https://momofree.apimienphi.com/api/QRCode?phone=0372256348&amount=420000&fbclid=IwAR2J2LxlMFefrNJ3IxnpdcwGXtCNV0qaQ-4_VnR0rZ8sm7c9QlBlMDsaeSY" alt="">
+            <div class="movie-details-des">
+                <div class="text-des active js-text-des">${cur_movie.description}</div>
+                <div class="trailer-des js-trailer-des">
+                    <iframe width="560" height="315" src="${cur_movie.movie_trailer_url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-
-                <p>Sử dụng App <span>MoMo</span> hoặc ứng dụng Camera hỗ trợ QR code để quét mã.</p>
-
-                <div class="loading"><i class="fa fa-spinner fa-spin"></i>Đang chờ bạn quét...</div>
             </div>
         </div>
     </div>
-</div>
+</c:forEach>
 
 <!-- Footer -->
 <footer id="footer" class="footer grid">
@@ -126,7 +151,9 @@
         <div class="col l-3 m-6 c-12 footer-info">
             <h2 class="footer-title">About us</h2>
             <p class="text-des">
-                Software Engineering subject project (INT2208E-22) of students in group 10, Faculty of Information Technology, University of Engineering and Technology - Vietnam National University, Hanoi. This software is intended to help you easily book movie tickets at home.
+                Software Engineering subject project (INT2208E-22) of students in group 10, Faculty of Information
+                Technology, University of Engineering and Technology - Vietnam National University, Hanoi. This
+                software is intended to help you easily book movie tickets at home.
             </p>
             <div class="socical-list">
                 <a href="#" class="social-item"><i class="fab fa-facebook-f"></i></a>
@@ -203,7 +230,7 @@
 
 <!-- Link JS -->
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/main.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/booking.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/moviedetails.js"></script>
 </body>
 
 </html>

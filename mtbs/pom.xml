@@ -151,6 +151,11 @@
 <!--			<artifactId>spring-context</artifactId>-->
 <!--			<version>5.0.1.RELEASE</version>-->
 <!--		</dependency>-->
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-jsr223</artifactId>
+			<version>3.0.7</version> <!-- look for latest -->
+		</dependency>
 	</dependencies>
 
 	<build>

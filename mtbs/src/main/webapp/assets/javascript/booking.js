@@ -20,6 +20,8 @@ function updateSelectedCount() {
   countSelectedSeat.innerHTML = regularSelectedSeats.length + premiumSelectedSeats.length;
   countPremiumSelectedSeat.innerHTML = premiumSelectedSeats.length;
   totalPrice.innerHTML = (+regularSelectedSeats.length * regularTicketPrice + +premiumSelectedSeats.length * premiumTicketPrice).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+  return totalPrice;
 }
 
 // seats.addEventListener("change", (e) => {
@@ -33,7 +35,6 @@ seatsAndScreen.addEventListener("click", (e) => {
 
   updateSelectedCount();
 });
-
 
 var today = new Date().toISOString().split('T')[0];
 document.querySelector('.booking-form-input #date-booking').setAttribute('min', today);

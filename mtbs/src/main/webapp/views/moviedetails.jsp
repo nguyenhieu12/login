@@ -70,7 +70,7 @@
 <c:forEach var="cur_movie" items="${movies}">
 <div class="movie-details-section">
   <div class="movie-details-container grid wide">
-    <h2 class=" page-title">Nội dung phim</h2>
+    <h2 class=" page-title">Chi tiết phim</h2>
 
       <div class="row movie-details-content">
 <%--        <div class="movie-image col l-2 m-3 c-11">--%>
@@ -115,7 +115,7 @@
           </ul>
 
           <div class="movie-details-options">
-            <a href="#" class="buy-ticket">
+            <a href="<%=request.getContextPath()%>/views/booking.jsp" class="buy-ticket">
               <i class="fa-solid fa-cart-arrow-down"></i>
               <span>Buy Ticket</span>
             </a>
@@ -123,7 +123,7 @@
             <ul>
               <li class="option-item option-item1 js-option-item1 active">
                 <i class="fa fa-light fa-hand-point-right"></i>
-                <span>Chi tiết</span>
+                <span>Nội dung</span>
               </li>
               <li class="option-item option-item2 js-option-item2">
                 <i class="fa fa-light fa-hand-point-right"></i>

@@ -216,11 +216,11 @@
 
                 <div class="booking-total">
                     <label>Total Price:</label>
-                    <p><span class="total-price">150.000</span>đ</p>
+                    <p><span class="total-price">0</span>đ</p>
                 </div>
 
                 <div class="pay-btn">
-                    <a href="./payment.html">
+                    <a href="<%=request.getContextPath()%>/views/payment.jsp">
                         <i class="fa-solid fa-credit-card"></i>
                         <span>Pay</span>
                     </a>
@@ -314,126 +314,6 @@
 
     <p class="copyright">Copyright © 2022 - Team 10 - All Rights Reversed.</p>
 </footer>
-
-<!-- Modal Login/Register-->
-<div class="login-register" id="login-register">
-    <div class="modal js-modal login js-login">
-        <div class="modal__container js-modal__container">
-            <!-- icon -->
-            <div class="modal__close-btn js-modal__close-btn">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-
-            <!-- Title -->
-            <h1 class="heading">Login</h1>
-
-            <!-- Content -->
-            <div class="content">
-                <form action="">
-                    <div class="user-details">
-                        <div class="input-box">
-                            <label for="" class="info">User name</label>
-                            <input type="text" placeholder="Enter your username" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Password</label>
-                            <input type="password" placeholder="Enter your password" required>
-                        </div>
-
-                    </div>
-
-                    <div class="submit-btn">
-                        <input type="submit" value="Submit" class="submit js-submit">
-                    </div>
-                    <button class="register-btn js-register-btn">Don't have an account?</button>
-                </form>
-            </div>
-
-
-        </div>
-    </div>
-
-    <div class="modal js-modal register js-register">
-        <div class="modal__container js-modal__container">
-            <!-- icon -->
-            <div class="modal__close-btn js-modal__close-btn">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-
-            <div class="modal__goback js-login-btn">
-                <i class='bx bx-arrow-back'></i>
-            </div>
-
-            <!-- Title -->
-            <h1 class="heading">Register</h1>
-
-            <!-- Content -->
-            <div class="content">
-                <form action="">
-                    <div class="user-details">
-                        <div class="input-box">
-                            <label for="" class="info">Full Name</label>
-                            <input type="text" placeholder="Enter your name" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Date of Birth</label>
-                            <input type="date" placeholder="Enter your birthday" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Email</label>
-                            <input type="email" placeholder="Enter your email" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Phone Number</label>
-                            <input type="tel" placeholder="Enter your number" required pattern="[0-9]{10}">
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Password</label>
-                            <input type="password" placeholder="Enter your password" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="" class="info">Confirm Password</label>
-                            <input type="password" placeholder="Confirm your password" required>
-                        </div>
-                    </div>
-
-                    <div class="gender-details">
-                        <input type="radio" name="gender" id="dot-1">
-                        <input type="radio" name="gender" id="dot-2">
-                        <input type="radio" name="gender" id="dot-3">
-
-                        <span class="gender-title">Gender</span>
-
-                        <div class="category">
-                            <label for="dot-1">
-                                <span class="custom-dot one"></span>
-                                <span class="gender">Male</span>
-                            </label>
-                            <label for="dot-2">
-                                <span class="custom-dot two"></span>
-                                <span class="gender">Female</span>
-                            </label>
-                            <label for="dot-3">
-                                <span class="custom-dot three"></span>
-                                <span class="gender">Prefer not to say</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="submit-btn">
-                        <input type="submit" value="Submit">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Link JS -->
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/javascript/booking.js"></script>
